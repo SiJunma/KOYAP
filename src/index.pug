@@ -1,0 +1,924 @@
+doctype
+
+html(lang='en')
+  head
+    
+    - var title = "KOYAP"
+    - var keywords = "Keywords var keywords"
+    - var description = "Description var description"
+    title= title
+
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible', content='ie=edge')
+
+    link(rel='icon', type='static/ico', href='static/favicon.ico?v=13')
+
+    meta(property='og:url', content='https:')
+    meta(property='og:image', content='img/ogg.png?v=1.3')
+    meta(property='og:image:width', content='300')
+    meta(property='og:image:height', content='300')
+
+    meta(property='og:title', content='')
+    meta(property='og:site_name', content='')
+    meta(property='og:description', content='')
+    meta(property='og:type', conten= '' + keywords + ''  )
+    meta(name='description', conten= '' + description + '' )
+    meta(name='keywords'  conten= '' + keywords + '' )
+
+  body.info(data-img='img/11.png')
+
+    
+    .scroll__menu.none
+      .container
+
+    
+    .right__menu
+      .bock__top
+        a.close(href='javascript:;')
+          img.logo__img(src='img/close.svg', alt='logo_black')
+      ul.menu__
+        li
+          a(href='javascript:;') Recently Added
+        li
+          a(href='javascript:;') Masterclass Sessions
+        li
+          a(href='javascript:;') Summit Home
+        li
+          a(href='javascript:;') RTT
+        li
+          a(href='javascript:;') Human Longevity
+    
+
+    header
+      .container
+        .row
+          .col.m12.s12.l12.xl12
+            a.logo(href='javascript:;')
+              img.logo__img(src='img/logo.svg', alt='logo_black')
+              
+            .menu
+              ul
+                li
+                  a(href='javascript:;') Testimonials
+                li
+                  a(href='javascript:;') Why Us
+                li
+                  a(href='javascript:;') How it Works
+                li
+                  a(href='javascript:;') Partners
+                li
+                  a(href='javascript:;') FAQ
+                li
+                  a(href='javascript:;') About Us
+                  
+            a.tel(href='javascript:;') 1-800-xxx-xxxx
+            
+            a.call__mob(href='javascript:;')
+              img.call__(src='img/call__mob.png', alt='logo_black')
+              | Free Call Back
+
+    
+    section.section__1
+      .container
+        .row
+          .col.m12.s12.l12.xl12
+           
+            .box__cont__img
+              img.image__left(src='img/section__1_ship.svg', alt='challenge')
+              img.image__right(src='img/section__1_plane.svg', alt='challenge')
+             
+            .header__offer
+              h1.title Book Your Favorite Destination <br>and get up to 70% Off!
+              h2.subtitle Get Up To 70% Off When You Book Your Favorite Destination with Koyap
+              p.desc As a leading travel agency in North America, we have partnered with the best cruise lines and airlines to provide you with the cheapest prices possible. Finding a cheap fare elsewhere? 
+                <br>Show it to us and we'll beat it!
+
+            .block__
+              .header__form
+                a.challenge(data-fancybox='', href='#modal-1')
+                  img(src='https://koyap.com/wp-content/themes/koyap/img/challenge.svg', alt='challenge')
+
+                .box__tab.ftype
+                  button(tupe="button", data-target="#f1content").tab-btn.select.cruise Cruise
+                  button(tupe="button", data-target="#flightContent").tab-btn.travelling Flight
+
+                .tab-content#f1content.show
+                  form(method='POST', action='javascript:void(null);')
+                    ul.form.f1
+                      li.fmail
+                        .form_input
+                          span.field
+                            input.email(type='email', name='email', required='', value='', placeholder='Email')
+
+                      li.ftel
+                        .form_input
+                          span.field
+                            input.phone(type='tel', name='phone', required='', value='', placeholder='Phone Number')
+                      
+                      li.fname
+                        .form_input
+                          span.field
+                            input.name(type='text', name='name', required='', value='', placeholder='Name')
+
+                      hr.fdivider
+
+                      // <div class="" id="cruise">
+                      li(data-type='cruise').fdest
+                        .form_input
+                          span.field
+                            select.destination(name='destination')
+                              option(value='-' selected disabled) Destination
+                              option(value='1') Destination 1
+                              option(value='2') Destination 2
+                              option(value='3') Destination 3
+
+
+
+                      li.sel_50(data-type='cruise').fdep
+                        .form_input
+                          span.field
+                            select.port(name='Add departure port')
+                              option(value='-' selected disabled) Departure Port
+                              option(value='1') Departure Port 1
+                              option(value='2') Departure Port 2
+                              option(value='3') Departure Port 3
+
+
+                      li(data-type='cruise').fdate
+                        .form_input
+                          span.field
+                            input.data(type='text', name='data', required='', value='', placeholder='Departure date', readonly='readonly')
+
+                    .form__actions
+                      // #TODO: error text
+                      .form__error(style="display: none;") Please fill all fields with valid information
+                      
+                      button#get_quote.red(type='submit', name='send') Get a free quote
+
+                .tab-content#flightContent
+                  .fway
+                    .box__tab
+                      button(tupe="button", data-target="#f2content").tab-btn.select One way
+                      button(tupe="button", data-target="#f3content").tab-btn Round trip 
+
+                  .tab-content#f2content.show  
+                    form(method='POST', action='javascript:void(null);')
+                      ul.form.f2 
+                        li.fmail
+                          .form_input
+                            span.field
+                              input.email(type='email', name='email', required='', value='', placeholder='Email')
+
+                        li.ftel
+                          .form_input
+                            span.field
+                              input.phone(type='text', name='phone', required='', value='', placeholder='Phone Number')
+                        
+                        li.fname
+                          .form_input
+                            span.field
+                              input.name(type='text', name='name', required='', value='', placeholder='Name')
+
+                        hr.fdivider
+
+                        li(data-type='cruise').ffrom
+                          .form_input
+                            span.field
+                              select.from(name='from')
+                                option(value='-' selected disabled) From
+                                option(value='1') from 1
+                                option(value='2') from 2
+                                option(value='3') from 3
+
+                        li(data-type='cruise').fto
+                          .form_input
+                            span.field
+                              select.to(name='to')
+                                option(value='-' selected disabled) To
+                                option(value='1') To 1
+                                option(value='2') to 2
+                                option(value='3') to 3
+
+                        li(data-type='cruise').fdep
+                          .form_input
+                            span.field
+                              input.data(type='text', name='departure', required='', value='', placeholder='Departure date', readonly='readonly')
+
+                      .form__actions
+                        // #TODO: error text
+                        .form__error(style="display: none;") Please fill all fields with valid information
+                        
+                        button#get_quote.red(type='submit', name='send') Get a free quote
+
+                  .tab-content#f3content  
+                    form(method='POST', action='javascript:void(null);')
+                      ul.form.f3 
+                        li.fmail
+                          .form_input
+                            span.field
+                              input.email(type='email', name='email', required='', value='', placeholder='Email')
+
+                        li.ftel
+                          .form_input
+                            span.field
+                              input.phone(type='text', name='phone', required='', value='', placeholder='Phone Number')
+                        
+                        li.fname
+                          .form_input
+                            span.field
+                              input.name(type='text', name='name', required='', value='', placeholder='Name')
+
+                        hr.fdivider
+
+                        li(data-type='cruise').ffrom
+                          .form_input
+                            span.field
+                              select.from(name='from')
+                                option(value='-' selected disabled) From
+                                option(value='1') from 1
+                                option(value='2') from 2
+                                option(value='3') from 3
+
+
+
+                        li(data-type='cruise').fto
+                          .form_input
+                            span.field
+                              select.to(name='to')
+                                option(value='-' selected disabled) To
+                                option(value='1') To 1
+                                option(value='2') to 2
+                                option(value='3') to 3
+
+
+                        li(data-type='cruise').fdep
+                          .form_input
+                            span.field
+                              input.data(type='text', name='departure', required='', value='', placeholder='Departure date', readonly='readonly')
+                        
+                        li(data-type='cruise').fdate
+                          .form_input
+                            span.field
+                              input.data(type='text', name='return', required='', value='', placeholder='Return date', readonly='readonly')
+
+                      .form__actions
+                        // #TODO: error text
+                        .form__error(style="display: none;") Please fill all fields with valid information
+                        
+                        button#get_quote.red(type='submit', name='send') Get a free quote
+
+
+    section.section-brands
+      .container
+        .row
+          .col.m12.s12.l12.xl12
+            .image__left
+              img(src='img/section__1_parrot_2.svg', alt='challenge')
+              
+            ul.brand
+              li
+                img(src='img/logo__1.svg', alt='challenge')
+              li
+                img(src='img/logo__2.svg', alt='challenge')
+              li
+                img(src='img/logo__3.svg', alt='challenge')
+              li
+                img(src='img/logo__4.svg', alt='challenge')
+              li
+                img(src='img/logo__5.svg', alt='challenge')
+              li
+                img(src='img/logo__6.svg', alt='challenge')
+              li
+                img(src='img/logo__7.svg', alt='challenge')
+                
+            .image__right
+              img(src='img/section__1_parrot_1.svg', alt='challenge')
+
+
+    section.section__2
+    
+      .container
+        .row
+          .col.m12.s12.l12.xl12
+            h2.title Testimonials
+            
+      .row
+        .col.m12.s12.l12.xl12
+          .testimonials
+            div
+              .box__padding
+                .box__testimonials
+                  .box__top
+                    .box__img
+                      img(src='img/section__2_user.png', alt='challenge')
+
+                    .box__content
+                      h3.title__ Jennifer P.
+                      ul.list
+                        li
+                          span.austin Austin – New York
+                        li
+                          span.business Business
+                        li
+                          span.top Top American First Class Airline
+                        li
+                          span.time 07.11.22
+
+                  .box__bottom 
+                    p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
+            div
+              .box__padding
+                .box__testimonials
+                  .box__top
+                    .box__img
+                      img(src='img/section__2_user.png', alt='challenge')
+
+                    .box__content
+                      h3.title__ Jennifer P.
+                      ul.list
+                        li
+                          span.austin Austin – New York
+                        li
+                          span.business Business
+                        li
+                          span.top Top American First Class Airline
+                        li
+                          span.top 07.11.22
+
+                  .box__bottom 
+                    p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
+            div
+              .box__padding
+                .box__testimonials
+                  .box__top
+                    .box__img
+                      img(src='img/section__2_user.png', alt='challenge')
+
+                    .box__content
+                      h3.title__ Jennifer P.
+                      ul.list
+                        li
+                          span.austin Austin – New York
+                        li
+                          span.business Business
+                        li
+                          span.top Top American First Class Airline
+                        li
+                          span.top 07.11.22
+
+                  .box__bottom 
+                    p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
+            div
+              .box__padding
+                .box__testimonials
+                  .box__top
+                    .box__img
+                      img(src='img/section__2_user.png', alt='challenge')
+
+                    .box__content
+                      h3.title__ Jennifer P.
+                      ul.list
+                        li
+                          span.austin Austin – New York
+                        li
+                          span.business Business
+                        li
+                          span.top Top American First Class Airline
+                        li
+                          span.time 07.11.22
+
+                  .box__bottom 
+                    p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
+            div
+              .box__padding
+                .box__testimonials
+                  .box__top
+                    .box__img
+                      img(src='img/section__2_user.png', alt='challenge')
+
+                    .box__content
+                      h3.title__ Jennifer P.
+                      ul.list
+                        li
+                          span.austin Austin – New York
+                        li
+                          span.business Business
+                        li
+                          span.top Top American First Class Airline
+                        li
+                          span.top 07.11.22
+
+                  .box__bottom 
+                    p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
+            div
+              .box__padding
+                .box__testimonials
+                  .box__top
+                    .box__img
+                      img(src='img/section__2_user.png', alt='challenge')
+
+                    .box__content
+                      h3.title__ Jennifer P.
+                      ul.list
+                        li
+                          span.austin Austin – New York
+                        li
+                          span.business Business
+                        li
+                          span.top Top American First Class Airline
+                        li
+                          span.top 07.11.22
+
+                  .box__bottom 
+                    p Koyap handled everything very smoothly. Your employees were helpful and responsive. Bill and I thankyou for making the dreams of a perfect cruise come true for so many people. Can't wait to book with you again in the future.
+          
+          .slick__arrows 
+            .container
+              button.slick-prev.slick-arrow.prev__2(aria-label='Previous' type='button' style='display: block;') Previous
+              button.slick-next.slick-arrow.next__2(aria-label='Next' type='button' style='display: block;') Next
+
+
+          .testimonials__desc 
+            | We have helped over   
+            strong 17,849 clients
+            |  book their dream vacation.
+
+
+          
+          .box__set
+            img.img_1(src='img/section__2_top_1.svg', alt='section__2_top_1')
+            img.img_2(src='img/section__2_top_2.svg', alt='section__2_top_1')
+            img.img_3(src='img/section__2_top_3.svg', alt='section__2_top_1')
+            img.img_4(src='img/section__2_top_4.svg', alt='section__2_top_1')
+            
+          
+          
+      .container
+        .row
+          .col.m12.s12.l12.xl12
+            h2.title Why book with us
+          
+        .row
+          .col.m12.s12.l4.xl4
+            .box__book
+              .box__img
+                img(src='img/book_1.png', alt='challenge')
+              .box__content
+                h4.title__ Get secret deals and discounts
+                p We have the best Cruise & Flight deals in the world. If you find a cheaper price online, we'll beat it.
+                
+          .col.m12.s12.l4.xl4
+            .box__book
+              .box__img
+                img(src='img/book_2.png', alt='challenge')
+              .box__content
+                h4.title__ Get secret deals and discounts
+                p We have the best Cruise & Flight deals in the world. If you find a cheaper price online, we'll beat it.
+                
+          .col.m12.s12.l4.xl4
+            .box__book
+              .box__img
+                img(src='img/book_3.png', alt='challenge')
+              .box__content
+                h4.title__ Get secret deals and discounts
+                p We have the best Cruise & Flight deals in the world. If you find a cheaper price online, we'll beat it.
+                
+              
+          
+      img.bottom__cor(src='img/section__2_cor.svg', alt='challenge')
+          
+          
+          
+    section.section__3
+      .container
+        .row
+          .col.m12.s12.l12.xl12
+            img.fish.right(src='img/fish.svg', alt='challenge')
+            h2.title How it works
+            
+        .row
+          .col.m12.s12.l6.xl4
+            .box__
+              h4.title__ Get in touch with an expert
+              p Complete the request form OR call to speak to one of our Travel Experts
+          .col.m12.s12.l6.xl4
+            .box__
+              h4.title__ Receive options via phone or email
+              p Our Travel agents will contact you to help book your trip
+          .col.m12.s12.l6.xl4
+            .box__
+              h4.title__ Choose and travel 
+              p Pick the option that suits you best & get ready for your trip 
+              
+            
+      .countts__
+        .container
+          .row
+            .col.m12.s12.l12.xl12
+              img.skat.left(src='img/skat-1.svg', alt='challenge')
+
+
+
+              h2.title Partner Cruise Lines & Airlines
+
+              h3.title__line Our partner cruises
+
+              .brand
+                div
+                  .li
+                    img(src='img/brand__1.svg', alt='challenge')
+                div
+                  .li
+                    img(src='img/brand__2.svg', alt='challenge')
+                div
+                  .li
+                    img(src='img/brand__3.svg', alt='challenge')
+                div
+                  .li
+                    img(src='img/brand__4.svg', alt='challenge')
+                div
+                  .li
+                    img(src='img/brand__5.svg', alt='challenge')
+                div
+                  .li
+                    img(src='img/brand__6.svg', alt='challenge')
+                div
+                  .li
+                    img(src='img/brand__7.svg', alt='challenge')
+                div
+                  .li
+                    img(src='img/brand__8.svg', alt='challenge')
+                div
+                  .li
+                    img(src='img/brand__9.svg', alt='challenge')
+                div
+                  .li
+                    img(src='img/brand__10.svg', alt='challenge')
+
+
+              h3.title__line Our partner airlines
+
+
+              img.fish.right(src='img/fish.svg', alt='challenge')
+
+              img.fish.left(src='img/fish-left.svg', alt='challenge')
+
+              img.fish.left.bottom(src='img/fish-left.svg', alt='challenge')
+
+              .brand
+                div
+                  .li
+                    img(src='img/brand__11.svg', alt='challenge')
+                div
+                  .li
+                    img(src='img/brand__12.svg', alt='challenge')
+                div
+                  .li
+                    img(src='img/brand__13.svg', alt='challenge')
+                div
+                  .li
+                    img(src='img/brand__14.svg', alt='challenge')
+                div
+                  .li
+                    img(src='img/brand__15.svg', alt='challenge')
+                div
+                  .li
+                    img(src='img/brand__16.svg', alt='challenge')
+                div
+                  .li
+                    img(src='img/brand__17.svg', alt='challenge')
+                div
+                  .li
+                    img(src='img/brand__18.svg', alt='challenge')
+                div
+                  .li
+                    img(src='img/brand__19.svg', alt='challenge')
+                div
+                  .li
+                    img(src='img/brand__20.svg', alt='challenge')
+
+
+
+
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+          
+    section.section__4
+      .box__pecypc.desctop__
+        img.img__1(src='img/pесурс.svg', alt='challenge')
+        img.img__2(src='img/pесурс.svg', alt='challenge')
+        img.img__3(src='img/pесурс.svg', alt='challenge')
+        img.img__4(src='img/pесурс.svg', alt='challenge')
+        img.img__5(src='img/pесурс.svg', alt='challenge')
+      .box__pecypc.mob__
+        img.img__1(src='img/pесурс__mob.svg', alt='challenge')
+        img.img__2(src='img/pесурс__mob.svg', alt='challenge')
+        img.img__3(src='img/pесурс__mob.svg', alt='challenge')
+        
+      .container
+        .row
+          .col.m12.s12.l12.xl12
+            h2.title FAQ
+
+        .row
+          .col.m12.s12.l12.xl12
+            .tab__bot
+              a.tab.active(href='javascript:;'  data-num='1') cRUISE
+              a.tab(href='javascript:;' data-num='2') Flight
+              
+            .tab__content
+              .tab_n.active
+                ul.list
+                  li
+                    a.tab(href='javascript:;') Do I need a passport?
+                    .content
+                      p For US citizens many popular cruise destinations, such as Caribbean, Alaska and Western Mediterranean, do not require visas. But visa might be necessary if you are taking a cruise ship that calls on more exotic destinations. Please talk to one of our support agent for a more nuanced answer.
+                  li
+                    a.tab(href='javascript:;') Do I need a Visa?
+                    .content
+                      p For US citizens many popular cruise destinations, such as Caribbean, Alaska and Western Mediterranean, do not require visas. But visa might be necessary if you are taking a cruise ship that calls on more exotic destinations. Please talk to one of our support agent for a more nuanced answer.
+ 
+                  li
+                    a.tab(href='javascript:;') Can I cancel my ticket?
+                    .content
+                      p For US citizens many popular cruise destinations, such as Caribbean, Alaska and Western Mediterranean, do not require visas. But visa might be necessary if you are taking a cruise ship that calls on more exotic destinations. Please talk to one of our support agent for a more nuanced answer.
+
+                  li
+                    a.tab(href='javascript:;') What if I miss my cruise ship?
+                    .content
+                      p For US citizens many popular cruise destinations, such as Caribbean, Alaska and Western Mediterranean, do not require visas. But visa might be necessary if you are taking a cruise ship that calls on more exotic destinations. Please talk to one of our support agent for a more nuanced answer.
+
+                  li
+                    a.tab(href='javascript:;') Can I book tickets online?
+                    .content
+                      p For US citizens many popular cruise destinations, such as Caribbean, Alaska and Western Mediterranean, do not require visas. But visa might be necessary if you are taking a cruise ship that calls on more exotic destinations. Please talk to one of our support agent for a more nuanced answer.
+
+              .tab_n
+                ul.list
+                  li
+                    a.tab(href='javascript:;') Flight Do I need a passport?
+                    .content
+                      p For US citizens many popular cruise destinations, such as Caribbean, Alaska and Western Mediterranean, do not require visas. But visa might be necessary if you are taking a cruise ship that calls on more exotic destinations. Please talk to one of our support agent for a more nuanced answer.
+                  li
+                    a.tab(href='javascript:;') Flight Do I need a Visa?
+                    .content
+                      p For US citizens many popular cruise destinations, such as Caribbean, Alaska and Western Mediterranean, do not require visas. But visa might be necessary if you are taking a cruise ship that calls on more exotic destinations. Please talk to one of our support agent for a more nuanced answer.
+
+                  li
+                    a.tab(href='javascript:;') Flight Can I cancel my ticket?
+                    .content
+                      p For US citizens many popular cruise destinations, such as Caribbean, Alaska and Western Mediterranean, do not require visas. But visa might be necessary if you are taking a cruise ship that calls on more exotic destinations. Please talk to one of our support agent for a more nuanced answer.
+
+                  li
+                    a.tab(href='javascript:;') Flight What if I miss my cruise ship?
+                    .content
+                      p For US citizens many popular cruise destinations, such as Caribbean, Alaska and Western Mediterranean, do not require visas. But visa might be necessary if you are taking a cruise ship that calls on more exotic destinations. Please talk to one of our support agent for a more nuanced answer.
+
+                  li
+                    a.tab(href='javascript:;') Flight Can I book tickets online?
+                    .content
+                      p For US citizens many popular cruise destinations, such as Caribbean, Alaska and Western Mediterranean, do not require visas. But visa might be necessary if you are taking a cruise ship that calls on more exotic destinations. Please talk to one of our support agent for a more nuanced answer.
+
+            
+            
+            
+          
+    section.section__5
+      .container
+        .row
+          .col.m12.s12.l6.xl5
+            h2.title About us
+            
+            p We’ve been in the travel industry for three generations and we truly love every part of it. Our passion for travel drives us to deliver the ultimate experience for our clients, be it a cruise to Alaska or a flight to Tanzania, our aim always stays true, to eliminate the hassle of booking so you can look forward to the best part of your journey. No matter what corner of the world you want to explore, we got your back.
+
+          .col.m12.s12.l6.xl7
+            .box__img
+              img(src='img/section__5_frame.svg', alt='challenge')
+            
+            
+
+
+
+    footer
+      .container
+        .row
+          .col.m12.s12.l6.xl7
+            .box__img
+              img(src='img/footer_ship.svg', alt='challenge')
+          
+          .col.m12.s12.l6.xl5
+          
+            h2.title Sign up for special prices, frequent discounts, exclusive offers, and other perks!
+
+            form(method='POST', action='javascript:void(null);')
+              // Hidden Required Fields
+
+              .form_input
+                span.field
+                  input.name(type='text', name='name', required='', value='', placeholder='Name')
+
+              .form_input
+                span.field
+                  input.mail(type='email', name='email', required='', value='', placeholder='Email')
+
+              button.red(type='submit', name='send') Sign up
+
+
+              
+      .contan__
+        .container
+          .row
+            .col.m12.s12.l12.xl12
+              img.kit.left(src='img/kit2.svg', alt='challenge')
+              img.kit.right(src='img/kit1.svg', alt='challenge')
+              
+              .logo
+                img(src='img/footer-logo.svg', alt='challenge')
+                
+                
+              .box__
+                a(data-fancybox='', data-src='#terms', href='#cookie_modal') Terms of Services
+                a(data-fancybox='', data-src='#policy', href='#policy') Privacy policy
+          
+                
+
+
+    a.call.bot(href='javascript:;')
+      img(src='img/call.svg', alt='call')
+
+
+    #cookie.cookie.none
+      a.close(href='javascript:;')
+        img(src='img/close.svg', alt='call')
+      .container
+        .row
+          .col.m12.s12.l12.xl12
+            img.img(src='img/cookies.svg', alt='call')
+            p This website uses cookies to ensure you get the best experience on our website.
+              a.learn(data-fancybox='', data-src='#cookie_modal', href='#cookie_modal') Learn More
+            a.red(href='javascript:;') Accept all
+
+
+              
+                  
+    a.bot_modal(data-fancybox='',  href='#modal-1') Open Modal 1
+    // //// MODAL ////
+    #modal-1.modal(style='display: none;')
+    
+      .content_modal.mod_1
+      
+      
+        .box__yallow 
+          h3.title Price Challenge
+      
+        .box__content
+
+          form(method='POST', action='javascript:void(null);')
+            // Hidden Required Fields
+            
+            h3.title Send us a link to the lowest fare you can find online.
+            h3.title.red__title We’ll   It!*
+            
+
+            .box__img
+
+              h4.title__ Website link
+              .form_input
+                span.field
+                  input.link(type='url', name='link', required='', value='', placeholder='Paste Link Here')
+
+            .form_input
+              span.field
+                input.name(type='text', name='name', required='', value='', placeholder='Name')
+
+            .form_input
+              span.field
+                input.phone(type='text', name='phone', required='', value='', placeholder='Phone number')
+
+            .form_input
+              span.field
+                input.mail(type='email', name='email', required='', value='', placeholder='Email')
+                
+            .column.rew
+              div
+                p.info *Does not apply to domestic flights
+              div
+                button.red(type='submit', name='send') Send
+          
+          
+
+    a.bot_modal(data-fancybox='', data-src='#modal-2', href='#modal-2') Open Modal 2
+    // //// MODAL ////
+    #modal-2.modal(style='display: none;')
+      .content_modal.column.mod_2
+        .box__img
+          img.desc(src='img/mod1.svg', alt='challenge')
+          img.mob(src='img/mod1_mob.svg', alt='challenge')
+          
+          
+        .box__content
+          h3.title Call to speak
+          p Live concierge available 24/7
+
+          .namber
+            p 1-800-xxx-xxxx
+
+          span.or or
+
+          h3.title Request a free callback
+          
+          p Get a call from a travel expert and free advice within minutes
+
+          form(method='POST', action='javascript:void(null);')
+            // Hidden Required Fields
+
+            .form_input
+              span.field
+                input.phone(type='text', name='phone', required='', value='', placeholder='Phone number')
+
+
+            button.red(type='submit', name='send') Send
+
+
+    a.bot_modal(data-fancybox='', data-src='#thx', href='#thx') thx
+    // //// MODAL ////
+    #thx.modal(style='display: none;')
+      .content_modal.thx
+        .box__img
+          img.desc(src='img/thx.svg', alt='challenge')
+          img.mob(src='img/thx_mob.svg', alt='challenge')
+          
+        .box__content
+          h2.title Thank you!
+          p Our team will reach you shortly with further information.
+
+          a.red(href='javascript:;') Back to home
+
+    a.bot_modal.none(data-fancybox='', data-src='#cookie_modal', href='#cookie_modal') cookie_modal
+    // //// MODAL ////
+    #cookie_modal.modal(style='display: none;')
+      .content_modal.cookie_modal
+        .box__img
+          img.desc(src='img/cookie_modal.svg', alt='challenge')
+          
+        .box__content
+          h2.title Privacy Overview
+          p This website uses cookies to improve your experience while you navigate through the website. Out of these, the cookies that are categorized as necessary are stored on your browser as they are essential for the working of basic functionalities of the website. We also use third-party cookies that help us analyze and understand how you use this website. These cookies will be stored in your browser only with your consent. You also have the option to opt-out of these cookies. But opting out of some of these cookies may affect your browsing experience.
+
+          a.red(href='javascript:;' ) Accept all
+          
+          
+          
+
+    a.bot_modal.none(data-fancybox='', data-src='#policy', href='#policy') Privacy policy
+    // //// MODAL ////
+    #policy.modal(style='display: none;')
+      .content_modal.info__modal
+          
+        .box__content
+          h2.title Privacy policy
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+          a.red(href='javascript:;' data-fancybox-close) Back
+
+    a.bot_modal.none(data-fancybox='', data-src='#terms', href='#cookie_modal') Terms of Services
+    // //// MODAL ////
+    #terms.modal(style='display: none;')
+      .content_modal.info__modal
+
+        .box__content
+          h2.title Terms of Services
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          p Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+
+          a.red(href='javascript:;' data-fancybox-close) Back
+
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/js-cookie/3.0.1/js.cookie.min.js')
+    script.
+      // console.log('index.pug');
+
+      $(function(){
+        $('[data-fancybox]').fancybox({
+        //  touch: false,
+          autoFocus: false
+        });
+
+        $("#test").on('click', function(){
+          $.fancybox.open('<div class="content__poly"><h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae saepe cum a mollitia soluta, consequuntur dolor, rem ipsa voluptas sint dignissimos, at ratione accusantium quos. Sapiente, officia quo ipsam quis distinctio. Repellendus id distinctio, placeat, consequatur molestias in error voluptate dolorem voluptatum aliquam, eligendi minima.</p><div>');
+        });
+
+      });
+
+
