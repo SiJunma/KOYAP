@@ -372,12 +372,6 @@ label {
   }
 }
 
-.slick-slider {
-
-  .slick-track,
-  .slick-list {}
-}
-
 .slick-track {
   position: relative;
   top: 0;
@@ -514,13 +508,6 @@ div.slick-slider.slick-initialized {
   left: 0;
 }
 
-
-
-
-
-
-
-
 .slick-dots {
   display: flex;
   justify-content: center;
@@ -535,14 +522,10 @@ div.slick-slider.slick-initialized {
     border-radius: 50%;
     margin: 0px 6px;
     cursor: pointer;
-
-
     transition: all .7s ease;
 
     &.slick-active {
-
       background: #3775D1;
-
     }
   }
 
@@ -987,15 +970,20 @@ section.section__1 {
 
   @include wid(1500) {
     background: #F5F8FC url(../img/section__1_back_3840.png) no-repeat top center;
+    background-size: 100% 960px;
+  }
+
+  @media screen and (max-width: 1800px) {
+    background-size: 120% 960px;
+  }
+
+  @media screen and (max-width: 1500px) {
+    background: #F5F8FC url(../img/section__1_back_768.png) no-repeat top center;
     background-size: 100% 920px;
   }
 
-  @include wid(1200-1499) {
-    background: #F5F8FC url(../img/section__1_back_768.png) no-repeat top center;
-  }
-
-  @include wid(992-1199) {
-    background: #F5F8FC url(../img/section__1_back_768.png) no-repeat top center;
+  @media screen and (max-width: 1200px) {
+    background-size: 120% 830px;
   }
 
   @include wid(601-991) {
@@ -1042,6 +1030,7 @@ section.section__1 {
 
     @include wid(992-1199) {
       margin-bottom: 50px;
+      padding-top: 103px;
     }
 
     @include wid(991) {
@@ -1066,12 +1055,13 @@ section.section__1 {
   &>div.container:nth-child(1) {
 
     .image__left {
-
       z-index: 1;
-
       left: 0;
       top: 0;
 
+      @media screen and (max-width: 1900px) and (min-width: 1499px) {
+        margin-left: -85px;
+      }
 
       @include wid(1500) {
         width: 506px;
@@ -1090,11 +1080,11 @@ section.section__1 {
       }
 
       @include wid(992-1199) {
-        width: 506px;
+        width: 328px;
         height: auto;
         position: absolute;
-        margin-top: 20px;
-        margin-left: -115px;
+        margin-top: -165px;
+        margin-left: -15px;
       }
 
       @include wid(601-991) {
@@ -1113,35 +1103,26 @@ section.section__1 {
         margin-left: 0;
       }
 
-
-
-
-
       z-index: 2;
-
-
       animation: section__1__image__left 2s ease,
       3.3s slideLeft 2.3s infinite;
-
-
-
     }
 
     .image__right {
       position: absolute;
       z-index: 1;
-
       right: 0;
       top: 0;
 
-
-
+      @media screen and (max-width: 1900px) and (min-width: 1499px) {
+        margin-right: -85px;
+      }
 
       @include wid(1500) {
         width: 506px;
         height: auto;
         position: absolute;
-        margin-top: -240px;
+        margin-top: -320px;
         margin-right: -145px;
       }
 
@@ -1149,16 +1130,16 @@ section.section__1 {
         width: 303px;
         height: auto;
         position: absolute;
-        margin-top: -200px;
+        margin-top: -260px;
         margin-right: -5px;
       }
 
       @include wid(992-1199) {
-        width: 506px;
+        width: 303px;
         height: auto;
         position: absolute;
-        margin-top: -140px;
-        margin-right: -145px;
+        margin-top: -230px;
+        margin-right: -45px;
       }
 
       @include wid(601-991) {
@@ -1178,20 +1159,10 @@ section.section__1 {
         top: 0px;
       }
 
-
-
-
-
-
       opacity: 0;
-
       z-index: 2;
-
-
       transition: all 1.9s ease;
       transform: scale(.3) rotate(0deg) translateY(850px) translateX(-1800px);
-
-
     }
 
   }
@@ -1199,13 +1170,13 @@ section.section__1 {
   .box__cont__img {
     width: 100%;
     position: absolute;
-    z-index: 7;
-    top: 250px;
+    z-index: -1;
+    top: 270px;
 
     @include wid(1500) {}
 
     @include wid(1200-1499) {
-      margin-top: 45px;
+      top: 420px;
       height: 0;
       display: flex;
       justify-content: space-between;
@@ -1216,6 +1187,7 @@ section.section__1 {
       height: 200px;
       display: flex;
       justify-content: space-between;
+      top: 338px;
     }
 
     @include wid(601-991) {
@@ -1628,28 +1600,27 @@ section.section__1 {
   align-items: center;
   margin-bottom: 127px;
 
+  @media screen and (max-width: 1500px) {
+    margin-bottom: 97px;
+  }
+
+  @media screen and (max-width: 1200px) {
+    margin-bottom: 80px;
+  }
+
   .title {
     color: #263954;
     font-family: 'Poppins';
     text-align: center;
     line-height: 120%;
     font-weight: 700;
+    font-size: 52px;
+    margin-bottom: 24px;
 
-    @include wid(992) {
-      font-size: 52px;
+    @media screen and (max-width: 1500px) {
+      font-size: 44px;
       margin-bottom: 24px;
     }
-
-    // @include wid(601-991) {
-    //   font: 700 28px/1.5em var(--p);
-    //   margin-bottom: 45px;
-    // }
-
-    // @include wid(600) {
-    //   font: 700 24px/1.5em var(--p);
-    //   margin-bottom: 45px;
-    //   font-weight: 700;
-    // }
   }
 
   .subtitle {
@@ -1665,6 +1636,10 @@ section.section__1 {
     font-size: 16px;
     max-width: 812px;
     line-height: 160%;
+
+    @media screen and (max-width: 1450px) {
+      max-width: 58%;
+    }
   }
 
   & > *:last-child {
@@ -1682,13 +1657,14 @@ section.section__1 {
   border-radius: 18px;
   z-index: 25;
   position: relative;
+  padding: 16px 32px;
 
-  @include wid(1200) {
-    padding: 16px 32px;
+  @media screen and (max-width: 1500px) {
+    padding: 16px;
   }
 
-  @include wid(992-1199) {
-    padding: 16px;
+  @media screen and (max-width: 1200px) {
+    padding: 16px 32px;
   }
 
   @include wid(991) {
@@ -1726,6 +1702,15 @@ section.section__1 {
     position: absolute;
     padding-right: 28px;
     width: 25%;
+
+    @media screen and (max-width: 1200px) {
+      width: calc(50% - 32px);
+      display: flex;
+      align-items: center;
+      height: 110px;
+      border-bottom: 1px solid #E9F0FB;
+      padding-right: 0;
+    }
   }
 
   .cruise, 
@@ -1742,9 +1727,13 @@ section.section__1 {
 
     font: 700 16px/1.2em var(--p);
     color: #95A6C8;
-    padding: 0;
+    padding: 0 15px;
     margin: 0;
     background: transparent;
+
+    @media screen and (max-width: 1500px) {
+      column-gap: 8px;
+    }
 
     @include wid(601-991) {
       height: 84px;
@@ -1786,6 +1775,7 @@ section.section__1 {
   }
 
   .fdivider {
+    grid-area: divider;
     display: block;
     background: #E9F0FB;
     width: 100%;
@@ -1805,28 +1795,53 @@ section.section__1 {
   .fmail {
     grid-area: mail;
     border-left: 2px solid #E9F0FB;
+
+    @media screen and (max-width: 1200px) {
+      border-left: 1px solid #E9F0FB;
+      border-bottom: 1px solid #E9F0FB;
+    }
   }
   .ftel {
     grid-area: tel;
     border-left: 2px solid #E9F0FB;
+
+    @media screen and (max-width: 1200px) {
+      border-left: none;
+      border-bottom: 1px solid #E9F0FB;
+    }
   }
   .fname {
     grid-area: name;
     border-left: 2px solid #E9F0FB;
-  }
-  .fdivider {
-    grid-area: divider;
+
+    @media screen and (max-width: 1200px) {
+      border-left: 1px solid #E9F0FB;
+      border-bottom: 1px solid #E9F0FB;
+    }
   }
   .fdest {
     grid-area: dest;
+
+    @media screen and (max-width: 1200px) {
+      border-bottom: 1px solid #E9F0FB;
+    }
   }
   .fdep {
     grid-area: dep;
     border-left: 2px solid #E9F0FB;
+
+    @media screen and (max-width: 1200px) {
+      border-left: 1px solid #E9F0FB;
+      border-bottom: 1px solid #E9F0FB;
+    }
   }
   .fdate {
     grid-area: date;
     border-left: 2px solid #E9F0FB;
+
+    @media screen and (max-width: 1200px) {
+      border-left: none;
+    }
   }
   .ffrom {
     grid-area: from;
@@ -1844,6 +1859,16 @@ section.section__1 {
     grid-template-columns: 1fr 1fr 1fr 1fr; 
     grid-template-rows: 1fr 2px 1fr; 
     gap: 16px 0px; 
+    
+    @media screen and (max-width: 1500px) {
+      gap: 5px 0;
+    }
+
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: 1fr 1fr; 
+      grid-template-rows: 110px 110px 110px 110px; 
+      gap: 0;
+    }
 
     &__actions {
       width: 100%;
@@ -1855,6 +1880,10 @@ section.section__1 {
       position: absolute;
       left: 0;
       bottom: calc(-16px - 67px);
+      
+      @include wid(1200-1499) {
+        bottom: calc(-12px - 50px);
+      }
 
       @include wid(991) {
         bottom: calc(-12px - 50px);
@@ -1868,6 +1897,19 @@ section.section__1 {
       left: 0;
       position: absolute;
       top: -8px;
+    }
+
+    li {
+      @media screen and (max-width: 1200px) {
+        display: flex;
+        align-items: center;
+
+        * {
+          width: 100%;
+          max-height: 100%;
+          height: 100%;
+        }
+      }
     }
   }
 
@@ -1910,6 +1952,14 @@ section.section__1 {
       "type mail tel name"
       "divider divider divider divider"
       "dest dep dep date"; 
+
+      @media screen and (max-width: 1200px) {
+        grid-template-areas: 
+        "type mail"
+        "tel name"
+        "dest dep"
+        "date ."; 
+      }
   }
 
   .f2 {
@@ -6115,71 +6165,56 @@ footer {
 
 
 .cookie {
-
+  max-width: 364px;
   position: fixed;
   z-index: 50;
-  bottom: 0;
-
+  bottom: 30px;
+  left: 22px;
   width: 100%;
-  height: 84px;
-  box-shadow: 0px 4px 58px rgba(55, 117, 209, 0.4);
-
-  padding: 16px 0;
+  height: auto;
+  box-shadow: 0px 4px 58px rgba(55, 117, 209, 0.08);
+  border-radius: 18px;
   background: #fff;
 
-  @include wid(601-991) {
-    padding-right: 20px;
+  @media screen and (max-width: 410px) {
+    right: 22px;
+    width: auto;
   }
 
-  @include wid(600) {
-    padding-right: 30px;
+  @media screen and (max-width: 365px) {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius:0px;
   }
 
-  @include wid(500) {
-    padding-right: 0px;
-  }
-
-  &>div.container>div.row:nth-child(1)>div:nth-child(1) {
+  &__wrapper {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-items: center;
-
-    @include wid(600) {
-      flex-wrap: wrap;
-      align-items: flex-start;
-    }
-
+    text-align: center;
+    row-gap: 16px;
+    padding: 16px;
   }
 
   .img {
-    margin-right: 24px;
-
-    @include wid(601-991) {
-      width: 35px;
-    }
-
-    @include wid(600) {
-      width: 25px;
-      margin-right: 14px;
-    }
+    width: 36px;
+    height: 36px;
   }
 
   p {
     color: #263954;
 
-
     @include wid(992) {
-      font: 700 18px/1.2em var(--p);
-    }
-
-    @include wid(601-991) {
-      font: 700 16px/1.2em var(--p);
+      font: 700 14px/1.5em var(--p);
     }
 
     @include wid(600) {
-      font: 700 12px/1.2em var(--p);
-      width: calc(100% - 50px);
-      padding-right: 30px;
+      font: 700 12px/1.5em var(--p);
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
     }
 
     a {
@@ -6187,22 +6222,20 @@ footer {
       margin: 0 24px;
 
       @include wid(992) {
-        font: 700 18px/1.2em var(--p);
+        font: 700 14px/1.5em var(--p);
       }
 
       @include wid(601-991) {
-        font: 700 16px/1.2em var(--p);
+        font: 700 14px/1.5em var(--p);
         margin: 0 20px;
       }
 
       @include wid(600) {
-        font: 700 12px/1.2em var(--p);
+        font: 700 12px/1.5em var(--p);
         margin: 0;
         margin-top: 5px;
         display: block;
       }
-
-
 
       &:hover {
         text-decoration: underline;
@@ -6214,6 +6247,8 @@ footer {
     position: absolute;
     right: 8px;
     top: 8px;
+    width: 22px;
+    height: 22px;
   }
 
   .red {
@@ -6221,68 +6256,84 @@ footer {
     max-height: 45px;
     border-radius: 8px;
     font: 700 14px/1.2em var(--p);
-    margin-left: auto;
-
-
-    @include wid(600) {
-      width: 100%;
-      max-width: 100%;
-      margin-top: 16px;
-    }
-
-
   }
 
-
-  @include wid(991) {
-    height: auto;
+  .learn {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
   }
-
 
 }
 
 
 .call {
   z-index: 50;
-
   position: fixed;
-  bottom: 100px;
-
-  right: 205px;
-
-  &.bot {
-    bottom: 25px;
-  }
-
-
-
+  bottom: 25px;
+  right: calc(25px + 16px + 132px);
   width: 132px;
   height: 132px;
-
-
   border-radius: 50%;
-
 
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 0 0 15px rgba(10, 230, 230, .45);
 
+  @include wid(1500) {}
 
+  @include wid(1200-1499) {
+    width: 102px;
+    height: 102px;
+    bottom: 25px;
+    right: calc(75px + 16px + 102px);
+  }
+
+  @include wid(992-1199) {
+    width: 102px;
+    height: 102px;
+    bottom: 25px;
+    right: calc(75px + 16px + 102px);
+  }
+
+  @include wid(601-991) {
+    display: none;
+  }
+
+  @include wid(600) {
+    display: none;
+  }
+
+}
+
+.chat {
+  z-index: 50;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(10, 230, 230, .45);
 
   @include wid(1500) {}
 
   @include wid(1200-1499) {
     width: 102px;
     height: 102px;
-    bottom: 95px;
+    bottom: 25px;
     right: 75px;
   }
 
   @include wid(992-1199) {
     width: 102px;
     height: 102px;
-    bottom: 95px;
+    bottom: 25px;
     right: 75px;
   }
 

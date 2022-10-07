@@ -751,20 +751,21 @@ html(lang='en')
                 
 
 
-    a.call.bot(href='javascript:;')
+    a.call(href='javascript:;')
       img(src='img/call.svg', alt='call')
+    
+    a.chat(href='javascript:;')
+      img(src='img/chat.svg', alt='chat')
 
 
     #cookie.cookie.none
       a.close(href='javascript:;')
         img(src='img/close.svg', alt='call')
-      .container
-        .row
-          .col.m12.s12.l12.xl12
-            img.img(src='img/cookies.svg', alt='call')
-            p This website uses cookies to ensure you get the best experience on our website.
-              a.learn(data-fancybox='', data-src='#cookie_modal', href='#cookie_modal') Learn More
-            a.red(href='javascript:;') Accept all
+      .cookie__wrapper
+        img.img(src='img/cookies.svg', alt='call')
+        p This website uses cookies to ensure you get the best experience on our website.
+          a.learn(data-fancybox='', data-src='#cookie_modal', href='#cookie_modal') Learn More
+        a.red(href='javascript:;') Accept all
 
 
               
