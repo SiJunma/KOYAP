@@ -628,6 +628,10 @@ input {
 
   & + .input-icon {
     background-image: url(../img/email_1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
     width: 24px;
     height: 24px;
     object-fit: contain;
@@ -656,6 +660,10 @@ input {
 
   & + .input-icon {
     background-image: url(../img/phone_1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
     width: 24px;
     height: 24px;
     object-fit: contain;
@@ -684,6 +692,10 @@ input {
 
   & + .input-icon {
     background-image: url(../img/name_1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
     width: 24px;
     height: 24px;
     object-fit: contain;
@@ -712,6 +724,10 @@ input {
 
   & + .input-icon {
     background-image: url(../img/destination_1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
     width: 24px;
     height: 24px;
     object-fit: contain;
@@ -740,6 +756,10 @@ input {
 
   & + .input-icon {
     background-image: url(../img/data_1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
     width: 24px;
     height: 24px;
     object-fit: contain;
@@ -768,6 +788,10 @@ input {
 
   & + .input-icon {
     background-image: url(../img/from_1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
     width: 24px;
     height: 24px;
     object-fit: contain;
@@ -796,6 +820,10 @@ input {
 
   & + .input-icon {
     background-image: url(../img/to_1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
     width: 24px;
     height: 24px;
     object-fit: contain;
@@ -852,6 +880,10 @@ input {
 
   & + .input-icon {
     background-image: url(../img/link_1.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    flex-shrink: 0;
     width: 24px;
     height: 24px;
     object-fit: contain;
