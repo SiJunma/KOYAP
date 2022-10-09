@@ -600,6 +600,8 @@ input {
 
 .field {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .fancybox-content {
