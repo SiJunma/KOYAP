@@ -82,18 +82,17 @@ html(lang='en')
       .container
         .row
           .col.m12.s12.l12.xl12
-           
-            .box__cont__img
-              img.image__left(src='img/section__1_ship.svg', alt='challenge')
-              img.image__right(src='img/section__1_plane.svg', alt='challenge')
-             
-            .header__offer
-              h1.title Book Your Favorite Destination <br>and get up to 70% Off!
-              h2.subtitle Get Up To 70% Off When You Book Your Favorite Destination with Koyap
-              p.desc As a leading travel agency in North America, we have partnered with the best cruise lines and airlines to provide you with the cheapest prices possible. Finding a cheap fare elsewhere? 
-                <br>Show it to us and we'll beat it!
+            .main-head__wrapper
+              .box__cont__img
+                img.image__left(src='img/section__1_ship.svg', alt='challenge')
+                img.image__right(src='img/section__1_plane.svg', alt='challenge')
+              
+              .header__offer
+                h1.title Book Luxury Cruises & Flights with a Reliable Travel Agency
+                h2.subtitle Get Up To 70% Off When You Book Your Favorite Destination with Koyap
+                p.desc As a leading travel agency in North America, we have partnered with the best cruise lines and airlines to provide you with the cheapest prices possible. Finding a cheap fare elsewhere? 
+                  <br>Show it to us and we'll beat it!
 
-            .block__
               .header__form
                 a.challenge(data-fancybox='', href='#modal-1')
                   img(src='https://koyap.com/wp-content/themes/koyap/img/challenge.svg', alt='challenge')
@@ -283,6 +282,9 @@ html(lang='en')
                         .form__error(style="display: none;") Please fill all fields with valid information
                         
                         button#get_quote.red(type='submit', name='send') Get a free quote
+              
+              .header__desc-mobile As a leading travel agency in North America, we have partnered with the best cruise lines and airlines to provide you with the cheapest prices possible. Finding a cheap fare elsewhere? 
+                <br>Show it to us and we'll beat it!
 
 
     section.section-brands
