@@ -989,8 +989,11 @@ header {
     right: 75px;
   }
 
-  @media (min-width: 601px) and (max-width: 991px) {
-    display: none;
+  @media (max-width: 991px) {
+    width: 50px;
+    height: 54px;
+    right: 12px;
+    bottom: 10px;
   }
 
   * {
@@ -2088,7 +2091,6 @@ section.section__1 {
       border-bottom: 1px solid #E9F0FB;
     }
   }
-
   .form {
     display: grid;
     padding: 0; margin: 0;
@@ -2162,7 +2164,6 @@ section.section__1 {
       }
     }
   }
-
   .fway {
     display: flex;
     position: absolute;
@@ -2207,29 +2208,57 @@ section.section__1 {
       }
     }
   }
+  .fclines {
+    grid-area: clines;
+    border-left: 2px solid #E9F0FB;
+
+    @media screen and (max-width: 1200px) {
+      border-left: none;
+    }
+
+    @media screen and (max-width: 840px) {
+      border-bottom: 1px solid #E9F0FB;
+    }
+  }
 
   .f1 {
     grid-template-areas: 
       "type mail tel name"
       "divider divider divider divider"
-      "dest dep dep date"; 
+      "dest clines dep date"; 
 
-      @media screen and (max-width: 1200px) and (min-width: 841px) {
-        grid-template-areas: 
-        "type mail"
-        "tel name"
-        "dest dep"
-        "date ."; 
+    @media screen and (max-width: 1200px) and (min-width: 841px) {
+      grid-template-areas: 
+      "type mail"
+      "tel name"
+      "dest dep"
+      "clines date"; 
+    }
+
+    @media screen and (max-width: 840px) {
+      grid-template-areas: 
+      "type type"
+      "dest clines"
+      "dep date"
+      "name tel"
+      "mail mail"; 
+    }
+
+    .fdate {
+      @media screen and (max-width: 1200px) {
+        border-left: 1px solid #E9F0FB;
       }
 
       @media screen and (max-width: 840px) {
-        grid-template-areas: 
-        "type type"
-        "dest dest"
-        "dep date"
-        "name tel"
-        "mail mail"; 
+        border-left: none;
       }
+    }
+
+    .fdest {
+      @media screen and (max-width: 840px) {
+        border-right: 1px solid #E9F0FB;
+      }
+    }
   }
 
   .f2 {
@@ -6707,7 +6736,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 0 15px rgba(10, 230, 230, .45);
+  box-shadow: 0px 0px 43px rgba(35, 100, 198, 0.5);
+  font-size: 0;
 
   @include wid(1500) {}
 
@@ -6726,11 +6756,55 @@ footer {
   }
 
   @include wid(601-991) {
-    display: none;
+    width: auto;
+    height: auto;
+    color: #2364C6;
+    font-weight: 500;
+    font-size: 8px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    box-shadow: none;
+    border-radius: 0;
+    row-gap: 2px;
+    right: 18px;
+    bottom: 10px;
+
+    img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      content: url(../img/chat__mob.svg);
+      box-shadow: 0px 0px 43px rgba(35, 100, 198, 0.5);
+    }
   }
 
   @include wid(600) {
-    display: none;
+    width: auto;
+    height: auto;
+    color: #2364C6;
+    font-weight: 500;
+    font-size: 8px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    box-shadow: none;
+    border-radius: 0;
+    row-gap: 2px;
+    right: 15px;
+    bottom: 10px;
+
+    img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      content: url(../img/chat__mob.svg);
+      box-shadow: 0px 0px 43px rgba(35, 100, 198, 0.5);
+    }
   }
 
 }

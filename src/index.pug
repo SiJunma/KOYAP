@@ -124,7 +124,6 @@ html(lang='en')
 
                       hr.fdivider
 
-                      // <div class="" id="cruise">
                       li(data-type='cruise').fdest
                         .form_input
                           span.field
@@ -133,6 +132,16 @@ html(lang='en')
                               option(value='1') Destination 1
                               option(value='2') Destination 2
                               option(value='3') Destination 3
+                            span.input-icon
+
+                      li.sel_50(data-type='CruiseLines').fclines
+                        .form_input
+                          span.field
+                            select.clines(name='Cruise Lines')
+                              option(value='-' selected disabled) Cruise Lines
+                              option(value='1') Ancora
+                              option(value='2') Andernach
+                              option(value='3') Barbados
                             span.input-icon
 
 
@@ -777,6 +786,7 @@ html(lang='en')
     
     a.chat(href='javascript:;')
       img(src='img/chat.svg', alt='chat')
+      | Chat now
 
 
     #cookie.cookie.none
