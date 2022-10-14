@@ -129,6 +129,15 @@ input[type="submit"] {
 }
 //default styles of plugin END
 
+#policy li,
+#terms li{
+  list-style-type:auto !important;
+  color: #526278 !important;
+}
+.autocomplete-active{
+  color: #14CDCD !important;
+}
+
 // =========================================================== 
 // FORMAS 
 // =========================================================== 
