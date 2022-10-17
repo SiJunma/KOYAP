@@ -3465,6 +3465,8 @@ section.section__2 {
     margin-left: auto;
     margin-right: auto;
     line-height: 150%;
+    position: relative;
+    z-index: 5;
 
     @include wid(600) {
       font-size: 18px;
