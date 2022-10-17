@@ -18,6 +18,24 @@
 //@import url('https://awakendhltstg.wpengine.com/wp-content/plugins/vimeo-sync-memberships/css/rvs-user-styles.css?ver=5.3.9');
 //@import url('https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css');
 
+@mixin shake-animation() {
+  @keyframes shake {
+    0% { transform:translate(0,0) }
+    0.78571% { transform:translate(5px,0) }
+    1.57143% { transform:translate(0,0) }
+    2.35714% { transform:translate(5px,0) }
+    3.14286% { transform:translate(0,0) }
+    3.92857% { transform:translate(5px,0) }
+    4.71429% { transform:translate(0,0) }
+    100% { transform:translate(0,0) }
+  }
+
+  animation: shake 10.82s cubic-bezier(.36,.07,.19,.97) both infinite;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
 :root {
   --r: 'h1';
   --l: 'h2';
@@ -1028,30 +1046,36 @@ section.section__1 {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 100% 960px;
-  padding: 180px 0 240px;
+  padding: 200px 0 240px;
   min-height: 960px;
 
   @media screen and (max-width: 1920px) and (min-width: 1501px) {
     background-image: url(../img/section__1_back.png);
-    padding-top: 200px;
+    padding-top: 230px;
   }
 
   @media screen and (max-width: 1500px) and (min-width: 1201px) {
-    background-size: 100% 920px;
+    background-size: 100% 870px;
     padding-top: 180px;
     min-height: 80vh;
   }
 
   @media screen and (max-width: 1200px) and (min-width: 601px) {
     background-size: 100% 100%;
-    padding: 210px 0 240px;
+    padding: 160px 0 240px;
     background-image: url(../img/section__1_back_1920.png);
+
+    @media screen and (max-width: 768px) {
+      padding: 120px 0 240px;
+      background-size: 100% 880px;
+    }
   }
 
   @media screen and (max-width: 600px) {
     background-image: url(../img/section__1_back_814.png);
-    padding-top: 110px;
-    background-size: 100% 814px;
+    padding-top: 90px;
+    background-size: 100% 774px;
+    min-height: 860px;
 
     @media screen and (max-width: 415px) {
       padding-top: 90px;
@@ -1074,38 +1098,43 @@ section.section__1 {
     width: 100%;
     position: absolute;
     z-index: -1;
-    top: 240px;
+    top: 230px;
     height: 0;
 
     @media screen and (max-width: 1900px) and (min-width: 1501px) {
-      top: 270px;
+      top: 240px;
     }
 
     @media screen and (max-width: 1500px) and (min-width: 1201px) {
-      top: 320px;
+      top: 280px;
       display: flex;
       justify-content: space-between;
     }
 
     @media screen and (max-width: 1200px) and (min-width: 601px) {
-      height: 200px;
+      height: 180px;
       order: 2;
       display: flex;
       justify-content: space-between;
       position: relative;
-      top: 12px;
+      top: -10px;
     }
 
-    @media screen and (max-width: 992px) and (min-width: 841px) {
-      margin-top: 40px;
+    @media screen and (max-width: 992px) and (min-width: 601px) {
+      margin-top: 35px;
       height: 160px;
-    }
+      top: 0;
 
-    @media screen and (max-width: 840px) and (min-width: 601px) {
-      height: 200px;
-      margin-bottom: 0px;
-      margin-top: 82px;
-      top: 50px;
+      @media screen and (max-width: 840px) {
+        height: 200px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        top: 0px;
+      }
+
+      @media screen and (max-width: 768px) {
+        top: 20px;
+      }
     }
 
     @media screen and (max-width: 600px) {
@@ -1116,7 +1145,12 @@ section.section__1 {
       height: 122px;
       position: relative;
       margin-bottom: 0;
-      margin-top: 30px;
+      margin-top: 13px;
+
+      @media screen and (max-width: 425px) {
+        top: 10px;
+        height: 112px;
+      }
     }
 
     // @include wid(601-991) {
@@ -1173,12 +1207,14 @@ section.section__1 {
 
         @media screen and (max-width: 840px)  {
           top: 20px;
-          width: 256px;
-          height: 180px;
+          width: 296px;
+          height: 260px;
         }
 
         @media screen and (max-width: 768px) {
           margin-left: 5px;
+          width: 256px;
+          height: auto;
         }
 
         @media screen and (max-width: 650px) {
@@ -1187,15 +1223,15 @@ section.section__1 {
       }
 
       @include wid(600) {
-        width: 170px;
+        width: 180px;
         height: 160px;
         position: relative;
         margin-top: -25px;
         margin-left: 0;
 
         @media screen and (max-width: 425px) {
-          width: 150px;
-          height: 140px;
+          width: 160px;
+          height: auto;
           position: relative;
           margin-top: -15px;
         }
@@ -1249,16 +1285,22 @@ section.section__1 {
         margin-right: 40px;
         top: 0;
 
+        @media screen and (max-width: 840px) {
+          margin-right: 0px;
+          width: 310px;
+        }
+
         @media screen and (max-width: 768px) {
           margin-right: 10px;
+          width: 300px;
         }
       }
 
       @include wid(600) {
         width: 190px;
-        height: 130px;
+        height: auto;
         position: relative;
-        margin-top: -50px;
+        margin-top: -120px;
         margin-right: 0;
         top: 0;
 
@@ -1703,7 +1745,7 @@ section.section__1 {
   }
 
   @media screen and (max-width: 1500px) and (min-width: 1201px) {
-    margin-bottom: 167px;
+    margin-bottom: 147px;
   }
 
   @media screen and (max-width: 1200px) {
@@ -1715,19 +1757,21 @@ section.section__1 {
     color: #263954;
     font-family: 'Poppins';
     text-align: center;
-    line-height: 120%;
+    line-height: 150%;
     font-weight: 700;
-    font-size: 52px;
+    font-size: 56px;
     margin-bottom: 24px;
     max-width: 900px;
 
     @media screen and (max-width: 1500px) and (min-width: 993px) {
-      font-size: 44px;
+      font-size: 48px;
       margin-bottom: 24px;
+      max-width: 790px;
     }
 
     @media screen and (max-width: 992px) and (min-width: 769px) {
-      font-size: 37px;
+      font-size: 45px;
+      max-width: 830px;
     }
 
     @media screen and (max-width: 768px) and (min-width: 601px) {
@@ -1736,7 +1780,7 @@ section.section__1 {
 
     @media screen and (max-width: 600px) {
       font-size: 26px;
-      max-width: 400px;
+      max-width: 342px;
       margin-bottom: 8px;
     }
   }
@@ -1847,6 +1891,8 @@ section.section__1 {
     top: -80px;
     right: -25px;
     z-index: 3;
+
+    @include shake-animation();
 
     @media (max-width: 600px) {
       right: 25px;
