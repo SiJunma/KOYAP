@@ -880,11 +880,27 @@ define(["jquery"], function ($) {
 
   $(window).resize(function () {
     $(".section__3 .brand").not(".slick-initialized").slick("resize");
+    clearMobMenu();
   });
 
   $(window).on("orientationchange", function () {
     $(".section__3 .brand").not(".slick-initialized").slick("resize");
   });
+
+  $(".js-mob-menu").on("click", function (e) {
+    e.preventDefault();
+    $(this).toggleClass("opened");
+    let target = $(this).attr("data-target");
+    $(target).toggleClass("opened");
+    $("body").toggleClass("fancybox-active");
+  });
+
+  //Function for close mob menu;
+  function clearMobMenu() {
+    $(".js-mob-menu").removeClass("opened");
+    $($(".js-mob-menu").attr("data-target")).removeClass("opened");
+    $("body").removeClass("fancybox-active");
+  }
 
   // ===========================================================
   // END SLICK SLIDER FULL NAVIGATION

@@ -53,10 +53,16 @@ html(lang='en')
       .container
         .row
           .col.m12.s12.l12.xl12
+            button(type="button", aria-label="Open mobile menu" data-target="#mobile-menu").burger-menu.js-mob-menu 
+              span 
+              span 
+              span
+
+
             a.logo(href='javascript:;')
               img.logo__img(src='img/logo.svg', alt='logo_black')
               
-            .menu
+            .menu#mobile-menu
               ul
                 li
                   a(href='javascript:;') Testimonials
