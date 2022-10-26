@@ -1140,11 +1140,11 @@ section.section__1 {
   }
 
   
-  @media screen and (max-width: 415px) {
+  @media screen and (max-width: 475px) {
     padding-top: 90px;
   }
 
-  @media screen and (max-width: 376px) {
+  @media screen and (max-width: 475px) {
     padding-top: 76px;
     background-size: 100% 614px;
     min-height: unset;
@@ -1217,14 +1217,9 @@ section.section__1 {
       margin-top: 13px;
     }
 
-    @media screen and (max-width: 425px) and (min-width: 376px) {
-      top: 10px;
-      height: 112px;
-    }
-
-    @media screen and (max-width: 376px) {
+    @media screen and (max-width: 475px) {
+      top: 6px;
       height: 72px;
-      top: 16px;
     }
 
     // @include wid(601-991) {
@@ -1309,16 +1304,10 @@ section.section__1 {
       }
 
       
-      @media screen and (max-width: 425px) and (min-width: 376px) {
-        width: 160px;
-        height: auto;
+      @media screen and (max-width: 475px){
+        width: 120px;
+        height: 100px;
         position: relative;
-        margin-top: -15px;
-      }
-
-      @media screen and (max-width: 376px) {
-        top: -40px;
-        width: 110px;
       }
     }
 
@@ -1382,11 +1371,11 @@ section.section__1 {
         top: 0;
       }
 
-      @media screen and (max-width: 415px) and (min-width: 376px) {
+      @media screen and (max-width: 475px) {
         margin-right: -20px;
       }
 
-      @media screen and (max-width: 376px) {
+      @media screen and (max-width: 475px) {
         margin-right: -10px;
         margin-top: -100px;
         width: 140px;
@@ -1863,7 +1852,7 @@ section.section__1 {
       margin-bottom: 8px;
     }
 
-    @media screen and (max-width: 376px) {
+    @media screen and (max-width: 475px) {
       font-size: 21px;
       line-height: 28px;
     }
@@ -1889,7 +1878,7 @@ section.section__1 {
       max-width: 350px;
     }
 
-    @media screen and (max-width: 376px) {
+    @media screen and (max-width: 475px) {
       font-size: 14px;
       max-width: 290px;
     }
