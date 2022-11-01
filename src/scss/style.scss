@@ -6982,3 +6982,688 @@ footer {
 // ===========================================================
 // END @media element
 // ===========================================================
+
+section.section__1_deals {
+  background-color: #F5F8FC;
+  overflow: hidden;
+  position: relative;
+  background-image: url(../img/section__1-bg1.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% 845px;
+  padding: 200px 0 0px;
+  min-height: 960px;
+
+  @media screen and (max-width: 1920px) and (min-width: 1501px) {
+    background-image: url(../img/section__1-bg1.png);
+    padding-top: 198px;
+  }
+
+  @media screen and (max-width: 1500px) and (min-width: 1201px) {
+    padding: 200px 0 0px;
+    min-height: 960px;
+    background-size: 100% 815px;
+  }
+
+  @media screen and (max-width: 1200px) and (min-width: 601px) {
+    background-size: 100% 1010px;
+    padding: 120px 0 0px;
+    background-image: url(../img/section__1_back_1920.png);
+
+    @media screen and (max-width: 992px) {
+      background-size: 100% 943px;
+      padding: 90px 0 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      padding: 90px 0 0;
+      background-size: 100% 883px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    background-image: url(../img/section__1_back_814.png);
+    padding-top: 90px;
+    background-size: 100% 754px;
+    min-height: 764px;
+    padding-bottom: 0;
+  }
+
+  @media screen and (max-width: 475px) {
+    padding-bottom: 230px;
+    padding-top: 76px;
+    background-size: 100% 682px;
+    background-image: url(../img/section__1-bg2.png);
+    min-height: unset;
+  }
+
+  .box__cont__img {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 230px;
+    height: 0;
+
+    @media screen and (max-width: 1920px) and (min-width: 1501px) {
+      top: 260px;
+    }
+
+    @media screen and (max-width: 1500px) and (min-width: 1201px) {
+      top: 321px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: 1200px) and (min-width: 601px) {
+      height: 180px;
+      order: 2;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      top: -10px;
+    }
+
+    @media screen and (max-width: 992px) and (min-width: 601px) {
+      margin-top: 45px;
+      height: 160px;
+      top: -20px;
+
+      @media screen and (max-width: 840px) {
+        height: 200px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        top: 0px;
+      }
+
+      @media screen and (max-width: 768px) {
+        height: 180px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        top: 0px;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      order: 2;
+      display: flex;
+      justify-content: space-between;
+      top: -3px;
+      height: 82px;
+      position: relative;
+      margin-bottom: 0;
+      margin-top: 13px;
+    }
+
+    @media screen and (max-width: 475px) {
+      top: 15px;
+      height: 82px;
+    }
+
+    .image__left {
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 506px;
+      height: auto;
+      position: absolute;
+      margin-top: -230px;
+      margin-left: -115px;
+      z-index: 2;
+      animation: section__1__image__left 2s ease,
+      3.3s slideLeft 2.3s infinite;
+
+      @media screen and (max-width: 1920px) and (min-width: 1501px) {
+        margin-left: -75px;
+        width: 406px;
+        height: 360px;
+        margin-top: -180px;
+      }
+
+      @include wid(1200-1499) {
+        width: 328px;
+        height: auto;
+        position: absolute;
+        margin-top: -205px;
+        margin-left: -65px;
+      }
+
+      @include wid(992-1199) {
+        width: 248px;
+        height: auto;
+        position: absolute;
+        margin-top: -30px;
+        margin-left: 35px;
+      }
+
+      @include wid(601-991) {
+        width: 286px;
+        height: 210px;
+        position: relative;
+        margin-top: -30px;
+        margin-left: 35px;
+
+        @media screen and (max-width: 840px)  {
+          top: 31px;
+          width: 256px;
+          height: 190px;
+          margin-left: 0;
+
+          @media screen and (max-width: 768px) {
+            top: 31px;
+            width: 256px;
+            height: 190px;
+            margin-left: 0;
+          }
+        }
+
+        @media screen and (max-width: 650px) {
+          margin-left: -11px;
+        }
+      }
+
+      @include wid(600) {
+        width: 150px;
+        height: 116px;
+        position: relative;
+        margin-top: -25px;
+        margin-left: 0;
+      }
+
+      @media screen and (max-width: 475px){
+        width: 120px;
+        height: 100px;
+        position: relative;
+      }
+    }
+
+    .image__right {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      top: 0;
+      width: 506px;
+      height: auto;
+      position: absolute;
+      margin-top: -320px;
+      margin-right: -145px;
+
+      @media screen and (max-width: 1920px)  and (min-width: 1501px) {
+        margin-right: -85px;
+        margin-top: -290px;
+        width: 456px;
+      }
+
+      @include wid(1200-1499) {
+        width: 303px;
+        height: auto;
+        position: absolute;
+        margin-top: -210px;
+        margin-right: -35px;
+      }
+
+      @include wid(992-1199) {
+        width: 303px;
+        height: auto;
+        position: absolute;
+        margin-top: -60px;
+        margin-right: -20px;
+      }
+
+      @include wid(601-991) {
+        width: 230px;
+        height: auto;
+        position: relative;
+        margin-top: -120px;
+        margin-right: 40px;
+        top: 0;
+
+        @media screen and (max-width: 840px) {
+          margin-right: 0px;
+          width: 230px;
+          margin-top: -90px;
+
+          @media screen and (max-width: 768px) {
+            margin-right: 0px;
+            width: 230px;
+            margin-top: -90px;
+          }
+        }
+      }
+
+      @include wid(600) {
+        width: 160px;
+        height: auto;
+        position: relative;
+        margin-top: -120px;
+        margin-right: 0;
+        top: 0;
+      }
+
+      @media screen and (max-width: 475px) {
+        margin-right: -10px;
+        margin-top: -50px;
+        width: 140px;
+        height: 100px;
+        top: -4px;
+      }
+
+      opacity: 0;
+      z-index: 2;
+      transition: all 1.9s ease;
+      transform: scale(.3) rotate(0deg) translateY(850px) translateX(-1800px);
+    }
+  }
+
+  .header__form {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 58px rgba(55, 117, 209, 0.08);
+    border-radius: 18px;
+    z-index: 25;
+    position: relative;
+    padding: 12px 10px;
+    max-width: 1188px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 124px;
+
+    @media screen and (max-width: 1500px) and (min-width: 1201px) {
+      padding: 16px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      padding: 16px 16px;
+      order: 3;
+      width: 100%;
+      max-width: 628px;
+      margin-top: -36px;
+    }
+
+    @media screen and (max-width: 992px) {
+      padding: 12px 16px;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-top: -7px;
+    }
+
+    @media screen and (max-width: 600px) {
+      padding: 12px 16px;
+    }
+
+    .challenge {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: -124px;
+      right: 0;
+      z-index: 3;
+
+      @include shake-animation();
+
+      @media (max-width: 600px) {
+        right: -20px;
+        width: 170px;
+        top: -40px;
+      }
+
+      @media (min-width: 1200px) and (max-width:1499px) {
+        width: 170px;
+        right: 0;
+        top: -97px;
+      }
+
+      @include wid(992-1199) {
+        top: -81px;
+        right: -21px;
+      }
+
+      @include wid(601-991)  {
+        top: -81px;
+        right: -21px;
+  
+        @media screen and (max-width: 840px) {
+          top: -41px;
+        }
+      }
+    }
+
+    .form {
+      display: grid;
+      padding: 0; margin: 0;
+      grid-auto-columns: 1fr; 
+      grid-template-columns: 1fr 1fr 1fr 1fr; 
+      grid-template-rows: 1fr 2px 1fr; 
+      gap: 16px 0px; 
+      
+      @media screen and (max-width: 1500px) and (min-width: 1201px) {
+        gap: 5px 0;
+      }
+
+      @media screen and (max-width: 1200px) and (min-width:601px) {
+        gap: 0;
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 2px 1fr; 
+      }
+
+      @media screen and (max-width: 600px)  {
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 2px 1fr; 
+        gap: 0;
+      }
+
+      &__actions {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        position: absolute;
+        left: 0;
+        bottom: -27px;
+
+        @media screen and (max-width: 1500px) and (min-width: 1201px) {
+          bottom: -27px;
+        }
+
+        @media screen and (max-width: 1200px) and (min-width: 601px) {
+          bottom: -17px;
+        }
+
+        @media screen and (max-width: 600px) {
+          bottom: -17px;
+        }
+      }
+    }
+
+    .fsubmit {
+      grid-area: submit;
+      display: flex;
+      align-items: center;
+      padding-left: 24px;
+  
+      .red {
+        @media screen and (max-width: 1500px) and (min-width: 1201px) {
+          height: 64px;
+          font: 700 18px/1.2em var(--p);
+        }
+      }
+  
+      #get_quote {
+        width: 100%;
+        max-width: unset;
+      }
+    }
+
+    .form_single {
+      grid-template-areas: 
+      "mail tel name submit";
+      grid-template-rows: 1fr; 
+  
+      @media screen and (max-width: 1200px) {
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+        "mail"
+        "tel"
+        "name";
+        grid-template-rows: 57px; 
+        justify-content: center;
+      }
+  
+      .fmail {
+        border: none;
+  
+        @media screen and (max-width: 1200px) {
+          border-bottom: 1px solid #e9f0fb;
+        }
+      }
+  
+      .fname {
+        @media screen and (max-width: 1200px) {
+          border: none;
+        }
+      }
+  
+      .fsubmit {
+  
+        @media screen and (max-width: 1200px) {
+          bottom: -82px;
+          padding-left: 0;
+          width: 100%;
+          left: 0;
+          position: absolute;
+  
+          #get_quote {
+            height: 50px;
+            width: 190px;
+            font-size: 14px;
+  
+            @media screen and (max-width: 475px) {
+              border-radius: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .header__offer {
+    .subtitle {
+      line-height: 150%;
+
+      @media screen and (max-width: 992px) and (min-width: 769px) {
+        max-width: 620px;
+      }
+
+      @media screen and (max-width: 768px) and (min-width: 601px) {
+        max-width: 360px;
+      }
+    }
+
+    .title {
+      @media screen and (max-width: 992px) and (min-width: 769px) {
+        font-size: 45px;
+        max-width: 790px;
+      }
+
+      @media screen and (max-width: 768px) and (min-width: 601px) {
+        max-width: 550px;
+      }
+    }
+  }
+}
+
+.section-brands_deals {
+  margin-top: -240px;
+
+  @include wid(992-1199) {
+    margin-top: -200px;
+  }
+
+  @include wid(600) {
+    margin-top: -180px;
+  }
+}
+
+.header_deals {
+  .call__mob {
+    @include wid(1200) {
+      display: none;
+    }
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: unset;
+
+    color: unset;
+    font: unset;
+
+    font-size: 0;
+    cursor: pointer;
+    width: 110px;
+    box-shadow: 0px 0px 43px rgba(255, 102, 107, 0.5);
+
+    .call__ {
+      box-shadow: unset;
+      border-radius: unset;
+      margin-bottom: unset;
+
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .logo {
+    @include wid(991) {
+      max-width: unset;
+      .logo__img {
+        max-width: unset;
+      }
+
+      max-width: 89px;
+      display: flex;
+      width: 100%;
+
+      .logo__img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      @media screen and (max-width: 1200px) {
+        max-width: 110px;
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+.call2 {
+  z-index: 50;
+  position: fixed;
+  bottom: 25px;
+  right: calc(25px + 16px + 132px);
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include wid(1500) {}
+
+  @include wid(1200-1499) {
+    width: 102px;
+    height: 102px;
+    bottom: 25px;
+    right: calc(75px + 16px + 102px);
+  }
+
+  @include wid(992-1199) {
+    display: none;
+    width: 102px;
+    height: 102px;
+    bottom: 25px;
+    right: calc(75px + 16px + 102px);
+  }
+  @include wid(601-991) {
+    display: none;
+  }
+  @include wid(600) {
+    display: none;
+  }
+}
+
+.chat2 {
+  z-index: 50;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+
+  @include wid(1500) {}
+  @include wid(1200-1499) {
+    width: 102px;
+    height: 102px;
+    bottom: 25px;
+    right: 75px;
+  }
+  @include wid(992-1199) {
+    width: 102px;
+    height: 102px;
+    bottom: 25px;
+    right: 75px;
+  }
+
+  @include wid(601-991) {
+    width: auto;
+    height: auto;
+    color: #2364C6;
+    font-weight: 500;
+    font-size: 0;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    box-shadow: none;
+    border-radius: 0;
+    row-gap: 2px;
+    right: 0px;
+    bottom: 10px;
+
+    img {
+      object-fit: contain;
+      width: 107px;
+      height: 90px;
+      content: url(../img/chat__mob2.svg);
+      filter: drop-shadow(0px 0px 43px rgba(55, 117, 209, 0.5)) ;
+    }
+  }
+
+  @include wid(600) {
+    width: auto;
+    height: auto;
+    color: #2364C6;
+    font-weight: 500;
+    font-size: 0;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    box-shadow: none;
+    border-radius: 0;
+    row-gap: 2px;
+    right: 0px;
+    bottom: 10px;
+
+    img {
+      object-fit: contain;
+      width: 102px;
+      height: 84px;
+      content: url(../img/chat__mob2.svg);
+      filter: drop-shadow(0px 0px 43px rgba(55, 117, 209, 0.5)) ;
+    }
+  }
+}
+
+
+.wpcf7-response-output,
+.wpcf7-spinner {
+  display: none;
+}
+
+input{
+  appearance: none !important;
+  -webkit-appearance:none !important;
+}
