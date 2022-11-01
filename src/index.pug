@@ -80,7 +80,7 @@ html(lang='en')
             a.tel(href='javascript:;') 1-800-xxx-xxxx
             
             a.call__mob(href='javascript:;')
-              img.call__(src='img/call__mob.svg', alt='logo_black')
+              img.call__(src='img/call__mob.png', alt='logo_black')
               | Free Call Back
 
     
@@ -101,229 +101,200 @@ html(lang='en')
                 a.challenge(data-fancybox='', href='#modal-1')
                   img(src='https://koyap.com/wp-content/themes/koyap/img/challenge.svg', alt='challenge')
 
-                form(method='POST', action='javascript:void(null);')
-                  ul.form.form_single
-                    li.fmail
-                      .form_input
-                        span.field
-                          input.email(type='email', name='email', required='', value='', placeholder='Email')
-                          span.input-icon
+                .box__tab.ftype
+                  button(tupe="button", data-target="#f1content").tab-btn.select.cruise Cruise
+                  button(tupe="button", data-target="#flightContent").tab-btn.travelling Flight
 
-                    li.ftel
-                      .form_input
-                        span.field
-                          input.phone(type='tel', name='phone', required='', value='', placeholder='Phone Number')
-                          span.input-icon
-                    
-                    li.fname
-                      .form_input
-                        span.field
-                          input.name(type='text', name='name', required='', value='', placeholder='Name')
-                          span.input-icon
+                .tab-content#f1content.show
+                  form(method='POST', action='javascript:void(null);')
+                    ul.form.f1
+                      li.fmail
+                        .form_input
+                          span.field
+                            input.email(type='email', name='email', required='', value='', placeholder='Email')
+                            span.input-icon
 
-                    li.fsubmit 
+                      li.ftel
+                        .form_input
+                          span.field
+                            input.phone(type='tel', name='phone', required='', value='', placeholder='Phone Number')
+                            span.input-icon
+                      
+                      li.fname
+                        .form_input
+                          span.field
+                            input.name(type='text', name='name', required='', value='', placeholder='Name')
+                            span.input-icon
+
+                      hr.fdivider
+
+                      li(data-type='cruise').fdest
+                        .form_input
+                          span.field
+                            select.destination(name='destination')
+                              option(value='-' selected disabled) Destination
+                              option(value='1') Destination 1
+                              option(value='2') Destination 2
+                              option(value='3') Destination 3
+                            span.input-icon
+
+                      li.sel_50(data-type='CruiseLine').fclines
+                        .form_input
+                          span.field
+                            select.clines(name='Cruise Line')
+                              option(value='-' selected disabled) Cruise Line
+                              option(value='1') Ancora
+                              option(value='2') Andernach
+                              option(value='3') Barbados
+                            span.input-icon
+
+
+                      li.sel_50(data-type='cruise').fdep
+                        .form_input
+                          span.field
+                            select.port(name='Add departure port')
+                              option(value='-' selected disabled) Departure Port
+                              option(value='1') Departure Port 1
+                              option(value='2') Departure Port 2
+                              option(value='3') Departure Port 3
+                            span.input-icon
+
+                      li(data-type='cruise').fdate
+                        .form_input
+                          span.field
+                            input.data(type='text', name='data', required='', value='', placeholder='Departure date', readonly='readonly')
+                            span.input-icon
+
+                    .form__actions
+                      // #TODO: error text
+                      .form__error(style="display: none;") Please fill all fields with valid information
+                      
                       button#get_quote.red(type='submit', name='send') Get a free quote
 
-                  .form__actions
-                    // #TODO: error text
-                    .form__error(style="display: none;") Please fill all fields with valid information
-              
+                .tab-content#flightContent
+                  .fway
+                    .box__tab
+                      button(tupe="button", data-target="#f2content").tab-btn.select One way
+                      button(tupe="button", data-target="#f3content").tab-btn Round trip 
 
+                  .tab-content#f2content.show  
+                    form(method='POST', action='javascript:void(null);')
+                      ul.form.f2 
+                        li.fmail
+                          .form_input
+                            span.field
+                              input.email(type='email', name='email', required='', value='', placeholder='Email')
+                              span.input-icon
 
-                //- .box__tab.ftype
-                //-   button(tupe="button", data-target="#f1content").tab-btn.select.cruise Cruise
-                //-   button(tupe="button", data-target="#flightContent").tab-btn.travelling Flight
-
-                //- .tab-content#f1content.show
-                //-   form(method='POST', action='javascript:void(null);')
-                //-     ul.form.f1
-                //-       li.fmail
-                //-         .form_input
-                //-           span.field
-                //-             input.email(type='email', name='email', required='', value='', placeholder='Email')
-                //-             span.input-icon
-
-                //-       li.ftel
-                //-         .form_input
-                //-           span.field
-                //-             input.phone(type='tel', name='phone', required='', value='', placeholder='Phone Number')
-                //-             span.input-icon
-                      
-                //-       li.fname
-                //-         .form_input
-                //-           span.field
-                //-             input.name(type='text', name='name', required='', value='', placeholder='Name')
-                //-             span.input-icon
-
-                //-       hr.fdivider
-
-                //-       li(data-type='cruise').fdest
-                //-         .form_input
-                //-           span.field
-                //-             select.destination(name='destination')
-                //-               option(value='-' selected disabled) Destination
-                //-               option(value='1') Destination 1
-                //-               option(value='2') Destination 2
-                //-               option(value='3') Destination 3
-                //-             span.input-icon
-
-                //-       li.sel_50(data-type='CruiseLine').fclines
-                //-         .form_input
-                //-           span.field
-                //-             select.clines(name='Cruise Line')
-                //-               option(value='-' selected disabled) Cruise Line
-                //-               option(value='1') Ancora
-                //-               option(value='2') Andernach
-                //-               option(value='3') Barbados
-                //-             span.input-icon
-
-
-                //-       li.sel_50(data-type='cruise').fdep
-                //-         .form_input
-                //-           span.field
-                //-             select.port(name='Add departure port')
-                //-               option(value='-' selected disabled) Departure Port
-                //-               option(value='1') Departure Port 1
-                //-               option(value='2') Departure Port 2
-                //-               option(value='3') Departure Port 3
-                //-             span.input-icon
-
-                //-       li(data-type='cruise').fdate
-                //-         .form_input
-                //-           span.field
-                //-             input.data(type='text', name='data', required='', value='', placeholder='Departure date', readonly='readonly')
-                //-             span.input-icon
-
-                //-     .form__actions
-                //-       // #TODO: error text
-                //-       .form__error(style="display: none;") Please fill all fields with valid information
-                      
-                //-       button#get_quote.red(type='submit', name='send') Get a free quote
-
-                //- .tab-content#flightContent
-                //-   .fway
-                //-     .box__tab
-                //-       button(tupe="button", data-target="#f2content").tab-btn.select One way
-                //-       button(tupe="button", data-target="#f3content").tab-btn Round trip 
-
-                //-   .tab-content#f2content.show  
-                //-     form(method='POST', action='javascript:void(null);')
-                //-       ul.form.f2 
-                //-         li.fmail
-                //-           .form_input
-                //-             span.field
-                //-               input.email(type='email', name='email', required='', value='', placeholder='Email')
-                //-               span.input-icon
-
-                //-         li.ftel
-                //-           .form_input
-                //-             span.field
-                //-               input.phone(type='text', name='phone', required='', value='', placeholder='Phone Number')
-                //-               span.input-icon
+                        li.ftel
+                          .form_input
+                            span.field
+                              input.phone(type='text', name='phone', required='', value='', placeholder='Phone Number')
+                              span.input-icon
                         
-                //-         li.fname
-                //-           .form_input
-                //-             span.field
-                //-               input.name(type='text', name='name', required='', value='', placeholder='Name')
-                //-               span.input-icon
+                        li.fname
+                          .form_input
+                            span.field
+                              input.name(type='text', name='name', required='', value='', placeholder='Name')
+                              span.input-icon
 
-                //-         hr.fdivider
+                        hr.fdivider
 
-                //-         li(data-type='cruise').ffrom
-                //-           .form_input
-                //-             span.field
-                //-               select.from(name='from')
-                //-                 option(value='-' selected disabled) From
-                //-                 option(value='1') from 1
-                //-                 option(value='2') from 2
-                //-                 option(value='3') from 3
-                //-               span.input-icon
+                        li(data-type='cruise').ffrom
+                          .form_input
+                            span.field
+                              select.from(name='from')
+                                option(value='-' selected disabled) From
+                                option(value='1') from 1
+                                option(value='2') from 2
+                                option(value='3') from 3
+                              span.input-icon
 
-                //-         li(data-type='cruise').fto
-                //-           .form_input
-                //-             span.field
-                //-               select.to(name='to')
-                //-                 option(value='-' selected disabled) To
-                //-                 option(value='1') To 1
-                //-                 option(value='2') to 2
-                //-                 option(value='3') to 3
-                //-               span.input-icon
+                        li(data-type='cruise').fto
+                          .form_input
+                            span.field
+                              select.to(name='to')
+                                option(value='-' selected disabled) To
+                                option(value='1') To 1
+                                option(value='2') to 2
+                                option(value='3') to 3
+                              span.input-icon
 
-                //-         li(data-type='cruise').fdep
-                //-           .form_input
-                //-             span.field
-                //-               input.data(type='text', name='departure', required='', value='', placeholder='Departure date', readonly='readonly')
-                //-               span.input-icon
+                        li(data-type='cruise').fdep
+                          .form_input
+                            span.field
+                              input.data(type='text', name='departure', required='', value='', placeholder='Departure date', readonly='readonly')
+                              span.input-icon
 
-                //-       .form__actions
-                //-         // #TODO: error text
-                //-         .form__error(style="display: none;") Please fill all fields with valid information
+                      .form__actions
+                        // #TODO: error text
+                        .form__error(style="display: none;") Please fill all fields with valid information
                         
-                //-         button#get_quote.red(type='submit', name='send') Get a free quote
+                        button#get_quote.red(type='submit', name='send') Get a free quote
 
-                //-   .tab-content#f3content  
-                //-     form(method='POST', action='javascript:void(null);')
-                //-       ul.form.f3 
-                //-         li.fmail
-                //-           .form_input
-                //-             span.field
-                //-               input.email(type='email', name='email', required='', value='', placeholder='Email')
-                //-               span.input-icon
+                  .tab-content#f3content  
+                    form(method='POST', action='javascript:void(null);')
+                      ul.form.f3 
+                        li.fmail
+                          .form_input
+                            span.field
+                              input.email(type='email', name='email', required='', value='', placeholder='Email')
+                              span.input-icon
 
-                //-         li.ftel
-                //-           .form_input
-                //-             span.field
-                //-               input.phone(type='text', name='phone', required='', value='', placeholder='Phone Number')
-                //-               span.input-icon
+                        li.ftel
+                          .form_input
+                            span.field
+                              input.phone(type='text', name='phone', required='', value='', placeholder='Phone Number')
+                              span.input-icon
                         
-                //-         li.fname
-                //-           .form_input
-                //-             span.field
-                //-               input.name(type='text', name='name', required='', value='', placeholder='Name')
-                //-               span.input-icon
+                        li.fname
+                          .form_input
+                            span.field
+                              input.name(type='text', name='name', required='', value='', placeholder='Name')
+                              span.input-icon
 
-                //-         hr.fdivider
+                        hr.fdivider
 
-                //-         li(data-type='cruise').ffrom
-                //-           .form_input
-                //-             span.field
-                //-               select.from(name='from')
-                //-                 option(value='-' selected disabled) From
-                //-                 option(value='1') from 1
-                //-                 option(value='2') from 2
-                //-                 option(value='3') from 3
-                //-               span.input-icon
-
-
-
-                //-         li(data-type='cruise').fto
-                //-           .form_input
-                //-             span.field
-                //-               select.to(name='to')
-                //-                 option(value='-' selected disabled) To
-                //-                 option(value='1') To 1
-                //-                 option(value='2') to 2
-                //-                 option(value='3') to 3
-                //-               span.input-icon
+                        li(data-type='cruise').ffrom
+                          .form_input
+                            span.field
+                              select.from(name='from')
+                                option(value='-' selected disabled) From
+                                option(value='1') from 1
+                                option(value='2') from 2
+                                option(value='3') from 3
+                              span.input-icon
 
 
-                //-         li(data-type='cruise').fdep
-                //-           .form_input
-                //-             span.field
-                //-               input.data(type='text', name='departure', required='', value='', placeholder='Departure date', readonly='readonly')
-                //-               span.input-icon
+
+                        li(data-type='cruise').fto
+                          .form_input
+                            span.field
+                              select.to(name='to')
+                                option(value='-' selected disabled) To
+                                option(value='1') To 1
+                                option(value='2') to 2
+                                option(value='3') to 3
+                              span.input-icon
+
+
+                        li(data-type='cruise').fdep
+                          .form_input
+                            span.field
+                              input.data(type='text', name='departure', required='', value='', placeholder='Departure date', readonly='readonly')
+                              span.input-icon
                         
-                //-         li(data-type='cruise').fdate
-                //-           .form_input
-                //-             span.field
-                //-               input.data(type='text', name='return', required='', value='', placeholder='Return date', readonly='readonly')
-                //-               span.input-icon
+                        li(data-type='cruise').fdate
+                          .form_input
+                            span.field
+                              input.data(type='text', name='return', required='', value='', placeholder='Return date', readonly='readonly')
+                              span.input-icon
 
-                //-       .form__actions
-                //-         // #TODO: error text
-                //-         .form__error(style="display: none;") Please fill all fields with valid information
+                      .form__actions
+                        // #TODO: error text
+                        .form__error(style="display: none;") Please fill all fields with valid information
                         
-                //-         button#get_quote.red(type='submit', name='send') Get a free quote
+                        button#get_quote.red(type='submit', name='send') Get a free quote
               
               //- .header__desc As a leading travel agency in North America, we have partnered with the best cruise lines and airlines to provide you with the cheapest prices possible. Finding a cheap fare elsewhere? Show it to us and we'll beat it!
     section.section-brands
