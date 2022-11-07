@@ -21,19 +21,21 @@ section.section__1_deals {
   }
 
   @media screen and (max-width: 1200px) and (min-width: 601px) {
-    background-size: 100% 1010px;
+    background-size: 100% 1050px;
     padding: 120px 0 0px;
     background-image: url(../img/section__1_back_1920.png);
 
     @media screen and (max-width: 992px) {
-      background-size: 100% 943px;
+      background-size: 100% 1000px;
       padding: 90px 0 0;
+
+      @media screen and (max-width: 768px) {
+        padding: 90px 0 0;
+        background-size: 100% 953px;
+      }
     }
 
-    @media screen and (max-width: 768px) {
-      padding: 90px 0 0;
-      background-size: 100% 883px;
-    }
+
   }
 
   @media screen and (max-width: 600px) {
@@ -45,8 +47,8 @@ section.section__1_deals {
   }
 
   @media screen and (max-width: 475px) {
-    padding-bottom: 230px;
     padding-top: 76px;
+    padding-bottom: 40px;
     background-size: 100% 682px;
     background-image: url(../img/section__1-bg2.png);
     min-height: unset;
@@ -489,14 +491,18 @@ section.section__1_deals {
 }
 
 .section-brands_deals {
-  margin-top: -240px;
+  margin-top: -70px;
 
   @include wid(992-1199) {
-    margin-top: -200px;
+    margin-top: -70px;
   }
 
-  @include wid(600) {
-    margin-top: -180px;
+  @media screen and (max-width: 768px) {
+    margin-top: -120px;
+
+    @media screen and (max-width: 600px) {
+      margin-top: -90px;
+    }
   }
 }
 
@@ -554,6 +560,43 @@ section.section__1_deals {
       max-width: 110px;
       margin-right: auto;
     }
+  }
+}
+
+.header__subtext {
+  text-align: center;
+  font-size: 34px;
+  color: #263954;
+  max-width: 770px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 150%;
+
+  margin-top: 140px;
+
+  @include wid(992-1199) {
+    order: 4;
+  }
+
+  @include wid(601-991) {
+    font-size: 28px;
+    order: 4;
+    max-width: 650px;
+  }
+
+  @include wid(600) {
+    font-size: 18px;
+    max-width: 300px;
+    order: 4;
+  }
+
+  
+  p {
+    line-height: inherit;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 
@@ -672,5 +715,4 @@ section.section__1_deals {
     }
   }
 }
-
 
