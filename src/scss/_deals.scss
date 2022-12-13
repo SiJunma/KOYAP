@@ -272,196 +272,248 @@ section.section__1_deals {
   }
 
   .header__form {
-    background: #FFFFFF;
-    box-shadow: 0px 4px 58px rgba(55, 117, 209, 0.08);
-    border-radius: 18px;
-    z-index: 25;
-    position: relative;
-    padding: 12px 10px;
-    max-width: 1188px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 124px;
+    // background: #FFFFFF;
+    // box-shadow: 0px 4px 58px rgba(55, 117, 209, 0.08);
+    // border-radius: 18px;
+    // z-index: 25;
+    // position: relative;
+    // padding: 12px 10px;
+    // max-width: 1188px;
+    // margin-left: auto;
+    // margin-right: auto;
+    // margin-top: 124px;
 
-    @media screen and (max-width: 1500px) and (min-width: 1201px) {
-      padding: 16px;
-    }
+    // @media screen and (max-width: 1500px) and (min-width: 1201px) {
+    //   padding: 16px;
+    // }
 
-    @media screen and (max-width: 1200px) {
-      padding: 16px 16px;
-      order: 3;
-      width: 100%;
-      max-width: 628px;
-      margin-top: -36px;
-    }
+    // @media screen and (max-width: 1200px) {
+    //   padding: 16px 16px;
+    //   order: 3;
+    //   width: 100%;
+    //   max-width: 628px;
+    //   margin-top: -36px;
+    // }
 
-    @media screen and (max-width: 992px) {
-      padding: 12px 16px;
-    }
+    // @media screen and (max-width: 992px) {
+    //   padding: 12px 16px;
+    // }
 
-    @media screen and (max-width: 768px) {
-      margin-top: -7px;
-    }
+    // @media screen and (max-width: 768px) {
+    //   margin-top: -7px;
+    // }
 
-    @media screen and (max-width: 600px) {
-      padding: 12px 16px;
-    }
+    // @media screen and (max-width: 600px) {
+    //   padding: 12px 16px;
+    // }
 
-    .challenge {
-      position: absolute;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      top: -124px;
-      right: 0;
-      z-index: 3;
-
-      @include shake-animation();
-
-      @media (max-width: 600px) {
-        right: -20px;
-        width: 170px;
-        top: -40px;
-      }
-
-      @media (min-width: 1200px) and (max-width:1499px) {
-        width: 170px;
-        right: 0;
-        top: -97px;
-      }
-
-      @include wid(992-1199) {
-        top: -81px;
-        right: -21px;
-      }
-
-      @include wid(601-991)  {
-        top: -81px;
-        right: -21px;
-  
-        @media screen and (max-width: 840px) {
-          top: -41px;
-        }
-      }
-    }
-
-    .form {
-      display: grid;
-      padding: 0; margin: 0;
-      grid-auto-columns: 1fr; 
-      grid-template-columns: 1fr 1fr 1fr 1fr; 
-      grid-template-rows: 1fr 2px 1fr; 
-      gap: 16px 0px; 
+    // .form {
+    //   display: grid;
+    //   padding: 0; margin: 0;
+    //   grid-auto-columns: 1fr; 
+    //   grid-template-columns: 1fr 1fr 1fr 1fr; 
+    //   grid-template-rows: 1fr 2px 1fr; 
+    //   gap: 16px 0px; 
       
-      @media screen and (max-width: 1500px) and (min-width: 1201px) {
-        gap: 5px 0;
-      }
+    //   @media screen and (max-width: 1500px) and (min-width: 1201px) {
+    //     gap: 5px 0;
+    //   }
 
-      @media screen and (max-width: 1200px) and (min-width:601px) {
-        gap: 0;
-        grid-template-columns: 1fr 1fr 1fr 1fr; 
-        grid-template-rows: 1fr 2px 1fr; 
-      }
+    //   @media screen and (max-width: 1200px) and (min-width:601px) {
+    //     gap: 0;
+    //     grid-template-columns: 1fr 1fr 1fr 1fr; 
+    //     grid-template-rows: 1fr 2px 1fr; 
+    //   }
 
-      @media screen and (max-width: 600px)  {
-        grid-template-columns: 1fr 1fr 1fr 1fr; 
-        grid-template-rows: 1fr 2px 1fr; 
-        gap: 0;
-      }
+    //   @media screen and (max-width: 600px)  {
+    //     grid-template-columns: 1fr 1fr 1fr 1fr; 
+    //     grid-template-rows: 1fr 2px 1fr; 
+    //     gap: 0;
+    //   }
 
-      &__actions {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    //   // &__actions {
+    //   //   width: 100%;
+    //   //   display: flex;
+    //   //   flex-direction: column;
+    //   //   align-items: center;
 
-        position: absolute;
-        left: 0;
-        bottom: -27px;
+    //   //   position: absolute;
+    //   //   left: 0;
+    //   //   bottom: -27px;
 
-        @media screen and (max-width: 1500px) and (min-width: 1201px) {
-          bottom: -27px;
-        }
+    //   //   @media screen and (max-width: 1500px) and (min-width: 1201px) {
+    //   //     bottom: -27px;
+    //   //   }
 
-        @media screen and (max-width: 1200px) and (min-width: 601px) {
-          bottom: -17px;
-        }
+    //   //   @media screen and (max-width: 1200px) and (min-width: 601px) {
+    //   //     bottom: -17px;
+    //   //   }
 
-        @media screen and (max-width: 600px) {
-          bottom: -17px;
-        }
-      }
-    }
+    //   //   @media screen and (max-width: 600px) {
+    //   //     bottom: -17px;
+    //   //   }
+    //   // }
+    // }
 
-    .fsubmit {
-      grid-area: submit;
-      display: flex;
-      align-items: center;
-      padding-left: 24px;
-  
-      .red {
-        @media screen and (max-width: 1500px) and (min-width: 1201px) {
-          height: 64px;
-          font: 700 18px/1.2em var(--p);
-        }
-      }
-  
-      #get_quote {
-        width: 100%;
-        max-width: unset;
-      }
-    }
-
-    .form_single {
+    .f1 {
+      grid-template-columns: 0.7fr 0.3fr 0.1fr 0.4fr 0.25fr 0.5fr;
       grid-template-areas: 
-      "mail tel name submit";
-      grid-template-rows: 1fr; 
+        "type tel tel tel name name"
+        "divider divider divider divider divider divider"
+        "dest dest dest dep dep dep"; 
   
-      @media screen and (max-width: 1200px) {
-        grid-template-columns: 1fr; 
+      @media screen and (max-width: 1200px) and (min-width: 700px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: 
-        "mail"
-        "tel"
-        "name";
-        grid-template-rows: 57px; 
-        justify-content: center;
+        "type type"
+        "tel name"
+        "dest dep";
       }
   
-      .fmail {
-        border: none;
+      @media screen and (max-width: 700px) {
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "type"
+        "dest"
+        "dep"
+        "name"
+        "tel"; 
+      }
   
+      // .fdate {
+      //   @media screen and (max-width: 1200px) {
+      //     border-left: 1px solid #E9F0FB;
+      //   }
+  
+      //   @media screen and (max-width: 840px) {
+      //     border-left: none;
+      //   }
+      // }
+
+      .ftel {
         @media screen and (max-width: 1200px) {
-          border-bottom: 1px solid #e9f0fb;
+          border-top: 1px solid #E9F0FB;
+        }
+
+        @media screen and (max-width: 840px) {
+          border-right: 1px solid #E9F0FB;
+        }
+
+        @media screen and (max-width: 700px) {
+          border-bottom: none;
+          border-top: none;
+          border-right: none;
         }
       }
-  
+
       .fname {
         @media screen and (max-width: 1200px) {
-          border: none;
+          border-top: 1px solid #E9F0FB;
+        }
+
+        @media screen and (max-width: 840px) {
+          border-right: none;
         }
       }
   
-      .fsubmit {
-  
+      .fdest {
         @media screen and (max-width: 1200px) {
-          bottom: -82px;
-          padding-left: 0;
-          width: 100%;
-          left: 0;
-          position: absolute;
-  
-          #get_quote {
-            height: 50px;
-            width: 190px;
-            font-size: 14px;
-  
-            @media screen and (max-width: 475px) {
-              border-radius: 8px;
-            }
-          }
+          border-bottom: none;
+        }
+
+        @media screen and (max-width: 840px) {
+          border-right: 1px solid #E9F0FB;
+        }
+
+        @media screen and (max-width: 700px) {
+          border-right: none;
+          border-top: 1px solid #E9F0FB;
+          border-bottom: 1px solid #E9F0FB;
+        }
+      }
+
+      .fdep {
+        @media screen and (max-width: 1200px) {
+          border-bottom: none;
+        }
+
+        @media screen and (max-width: 840px) {
+          border-right: none;
         }
       }
     }
+
+    // .fsubmit {
+    //   grid-area: submit;
+    //   display: flex;
+    //   align-items: center;
+    //   padding-left: 24px;
+  
+    //   .red {
+    //     @media screen and (max-width: 1500px) and (min-width: 1201px) {
+    //       height: 64px;
+    //       font: 700 18px/1.2em var(--p);
+    //     }
+    //   }
+  
+    //   #get_quote {
+    //     width: 100%;
+    //     max-width: unset;
+    //   }
+    // }
+
+    // .form_single {
+    //   grid-template-areas: 
+    //   "mail tel name submit";
+    //   grid-template-rows: 1fr; 
+  
+    //   @media screen and (max-width: 1200px) {
+    //     grid-template-columns: 1fr; 
+    //     grid-template-areas: 
+    //     "mail"
+    //     "tel"
+    //     "name";
+    //     grid-template-rows: 57px; 
+    //     justify-content: center;
+    //   }
+  
+    //   .fmail {
+    //     border: none;
+  
+    //     @media screen and (max-width: 1200px) {
+    //       border-bottom: 1px solid #e9f0fb;
+    //     }
+    //   }
+  
+    //   .fname {
+    //     @media screen and (max-width: 1200px) {
+    //       border: none;
+    //     }
+    //   }
+  
+    //   .fsubmit {
+  
+    //     @media screen and (max-width: 1200px) {
+    //       bottom: -82px;
+    //       padding-left: 0;
+    //       width: 100%;
+    //       left: 0;
+    //       position: absolute;
+  
+    //       #get_quote {
+    //         height: 50px;
+    //         width: 190px;
+    //         font-size: 14px;
+  
+    //         @media screen and (max-width: 475px) {
+    //           border-radius: 8px;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   }
 
   .header__offer {

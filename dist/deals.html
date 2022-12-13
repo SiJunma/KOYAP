@@ -15,7 +15,7 @@
     <meta property="og:type" conten="Keywords var keywords">
     <meta name="description" conten="Description var description">
     <meta name="keywords" conten="Keywords var keywords">
-  <link href="css/min.css?v=6cac175eca1bb64e13a9" rel="stylesheet"></head>
+  <link href="css/min.css?v=e691f9b3739b8d98812e" rel="stylesheet"></head>
   <body class="info" data-img="img/11.png">
     <div class="scroll__menu none">
       <div class="container"></div>
@@ -60,29 +60,152 @@
                 <h2 class="subtitle">Found a cheap fare elsewhere? Show it to us and we'll beat it</h2>
               </div>
               <div class="header__form"><a class="challenge" data-fancybox="" href="#modal-1"><img src="https://koyap.com/wp-content/themes/koyap/img/challenge.svg" alt="challenge"></a>
-                <form method="POST" action="javascript:void(null);">
-                  <ul class="form form_single">
-                    <li class="fmail">
-                      <div class="form_input"><span class="field">
-                          <input class="email" type="email" name="email" required="" value="" placeholder="Email"><span class="input-icon"></span></span></div>
-                    </li>
-                    <li class="ftel">
-                      <div class="form_input"><span class="field">
-                          <input class="phone" type="tel" name="phone" required="" value="" placeholder="Phone Number"><span class="input-icon"></span></span></div>
-                    </li>
-                    <li class="fname">
-                      <div class="form_input"><span class="field">
-                          <input class="name" type="text" name="name" required="" value="" placeholder="Name"><span class="input-icon"></span></span></div>
-                    </li>
-                    <li class="fsubmit"> 
+                <div class="box__tab ftype">
+                  <button class="tab-btn select cruise" tupe="button" data-target="#f1content">Cruise</button>
+                  <button class="tab-btn travelling" tupe="button" data-target="#flightContent">Flight</button>
+                </div>
+                <div class="tab-content show" id="f1content">
+                  <form method="POST" action="javascript:void(null);">
+                    <ul class="form f1">
+                      <li class="ftel">
+                        <div class="form_input"><span class="field">
+                            <input class="phone" type="tel" name="phone" required="" value="" placeholder="Phone Number"><span class="input-icon"></span></span></div>
+                      </li>
+                      <li class="fname">
+                        <div class="form_input"><span class="field">
+                            <input class="name" type="text" name="name" required="" value="" placeholder="Name"><span class="input-icon"></span></span></div>
+                      </li>
+                      <hr class="fdivider">
+                      <li class="fdest" data-type="cruise">
+                        <div class="form_input"><span class="field">
+                            <select class="destination" name="destination">
+                              <option value="-" selected disabled>Destination</option>
+                              <option value="1">Destination 1</option>
+                              <option value="2">Destination 2</option>
+                              <option value="3">Destination 3</option>
+                            </select><span class="input-icon"></span></span></div>
+                      </li>
+                      <li class="sel_50 fdep" data-type="cruise">
+                        <div class="form_input"><span class="field">
+                            <select class="port" name="Add departure port">
+                              <option value="-" selected disabled>Departure Port</option>
+                              <option value="1">Departure Port 1</option>
+                              <option value="2">Departure Port 2</option>
+                              <option value="3">Departure Port 3</option>
+                            </select><span class="input-icon"></span></span></div>
+                      </li>
+                    </ul>
+                    <div class="form__actions">
+                      <!-- #TODO: error text-->
+                      <div class="form__error" style="display: none;">Please fill all fields with valid information</div>
                       <button class="red" id="get_quote" type="submit" name="send">Get a free quote</button>
-                    </li>
-                  </ul>
-                  <div class="form__actions">
-                    <!-- #TODO: error text-->
-                    <div class="form__error" style="display: none;">Please fill all fields with valid information</div>
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-content" id="flightContent">
+                  <div class="fway">
+                    <div class="box__tab">
+                      <button class="tab-btn select" tupe="button" data-target="#f2content">One way</button>
+                      <button class="tab-btn" tupe="button" data-target="#f3content">Round trip </button>
+                    </div>
                   </div>
-                </form>
+                  <div class="tab-content show" id="f2content"> 
+                    <form method="POST" action="javascript:void(null);">
+                      <ul class="form f2"> 
+                        <li class="fmail">
+                          <div class="form_input"><span class="field">
+                              <input class="email" type="email" name="email" required="" value="" placeholder="Email"><span class="input-icon"></span></span></div>
+                        </li>
+                        <li class="ftel">
+                          <div class="form_input"><span class="field">
+                              <input class="phone" type="text" name="phone" required="" value="" placeholder="Phone Number"><span class="input-icon"></span></span></div>
+                        </li>
+                        <li class="fname">
+                          <div class="form_input"><span class="field">
+                              <input class="name" type="text" name="name" required="" value="" placeholder="Name"><span class="input-icon"></span></span></div>
+                        </li>
+                        <hr class="fdivider">
+                        <li class="ffrom" data-type="cruise">
+                          <div class="form_input"><span class="field">
+                              <select class="from" name="from">
+                                <option value="-" selected disabled>From</option>
+                                <option value="1">from 1</option>
+                                <option value="2">from 2</option>
+                                <option value="3">from 3</option>
+                              </select><span class="input-icon"></span></span></div>
+                        </li>
+                        <li class="fto" data-type="cruise">
+                          <div class="form_input"><span class="field">
+                              <select class="to" name="to">
+                                <option value="-" selected disabled>To</option>
+                                <option value="1">To 1</option>
+                                <option value="2">to 2</option>
+                                <option value="3">to 3</option>
+                              </select><span class="input-icon"></span></span></div>
+                        </li>
+                        <li class="fdep" data-type="cruise">
+                          <div class="form_input"><span class="field">
+                              <input class="data" type="text" name="departure" required="" value="" placeholder="Departure date" readonly="readonly"><span class="input-icon"></span></span></div>
+                        </li>
+                      </ul>
+                      <div class="form__actions">
+                        <!-- #TODO: error text-->
+                        <div class="form__error" style="display: none;">Please fill all fields with valid information</div>
+                        <button class="red" id="get_quote" type="submit" name="send">Get a free quote</button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="tab-content" id="f3content"> 
+                    <form method="POST" action="javascript:void(null);">
+                      <ul class="form f3"> 
+                        <li class="fmail">
+                          <div class="form_input"><span class="field">
+                              <input class="email" type="email" name="email" required="" value="" placeholder="Email"><span class="input-icon"></span></span></div>
+                        </li>
+                        <li class="ftel">
+                          <div class="form_input"><span class="field">
+                              <input class="phone" type="text" name="phone" required="" value="" placeholder="Phone Number"><span class="input-icon"></span></span></div>
+                        </li>
+                        <li class="fname">
+                          <div class="form_input"><span class="field">
+                              <input class="name" type="text" name="name" required="" value="" placeholder="Name"><span class="input-icon"></span></span></div>
+                        </li>
+                        <hr class="fdivider">
+                        <li class="ffrom" data-type="cruise">
+                          <div class="form_input"><span class="field">
+                              <select class="from" name="from">
+                                <option value="-" selected disabled>From</option>
+                                <option value="1">from 1</option>
+                                <option value="2">from 2</option>
+                                <option value="3">from 3</option>
+                              </select><span class="input-icon"></span></span></div>
+                        </li>
+                        <li class="fto" data-type="cruise">
+                          <div class="form_input"><span class="field">
+                              <select class="to" name="to">
+                                <option value="-" selected disabled>To</option>
+                                <option value="1">To 1</option>
+                                <option value="2">to 2</option>
+                                <option value="3">to 3</option>
+                              </select><span class="input-icon"></span></span></div>
+                        </li>
+                        <li class="fdep" data-type="cruise">
+                          <div class="form_input"><span class="field">
+                              <input class="data" type="text" name="departure" required="" value="" placeholder="Departure date" readonly="readonly"><span class="input-icon"></span></span></div>
+                        </li>
+                        <li class="fdate" data-type="cruise">
+                          <div class="form_input"><span class="field">
+                              <input class="data" type="text" name="return" required="" value="" placeholder="Return date" readonly="readonly"><span class="input-icon"></span></span></div>
+                        </li>
+                      </ul>
+                      <div class="form__actions">
+                        <!-- #TODO: error text-->
+                        <div class="form__error" style="display: none;">Please fill all fields with valid information</div>
+                        <button class="red" id="get_quote" type="submit" name="send">Get a free quote</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
               </div>
               <div class="header__subtext"> 
                 <p>Call Us, Chat Now or Get a Free Quote and watch us work our magic</p>
@@ -635,5 +758,5 @@
       
       });
     </script>
-  <script type="text/javascript" src="js/main.min.js?v=6cac175eca1bb64e13a9"></script></body>
+  <script type="text/javascript" src="js/main.min.js?v=e691f9b3739b8d98812e"></script></body>
 </html>
