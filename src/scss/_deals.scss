@@ -21,13 +21,17 @@ section.section__1_deals {
   }
 
   @media screen and (max-width: 1200px) and (min-width: 601px) {
-    background-size: 100% 1050px;
+    background-size: 100% 1093px;
     padding: 120px 0 0px;
     background-image: url(../img/section__1_back_1920.png);
 
     @media screen and (max-width: 992px) {
-      background-size: 100% 1000px;
+      background-size: 100% 1045px;
       padding: 90px 0 0;
+
+      @media screen and (max-width: 840px) {
+        background-size: 100% 1017px;
+      }
 
       @media screen and (max-width: 768px) {
         padding: 90px 0 0;
@@ -48,10 +52,10 @@ section.section__1_deals {
 
   @media screen and (max-width: 475px) {
     padding-top: 76px;
-    padding-bottom: 40px;
     background-size: 100% 682px;
     background-image: url(../img/section__1-bg2.png);
     min-height: unset;
+    padding-bottom: 0;
   }
 
   .box__cont__img {
@@ -86,7 +90,7 @@ section.section__1_deals {
       top: -20px;
 
       @media screen and (max-width: 840px) {
-        height: 200px;
+        height: 180px;
         margin-bottom: 0px;
         margin-top: 0px;
         top: 0px;
@@ -624,7 +628,12 @@ section.section__1_deals {
   margin-right: auto;
   line-height: 150%;
 
-  margin-top: 140px;
+  margin-top: 220px;
+  padding-bottom: 120px;
+
+  @media screen and (max-width: 1500px) and (min-width:600px) {
+    margin-top: 190px;
+  }
 
   @include wid(992-1199) {
     order: 4;
@@ -640,6 +649,9 @@ section.section__1_deals {
     font-size: 18px;
     max-width: 300px;
     order: 4;
+    margin-top: 160px;
+    
+    padding-bottom: 0px;
   }
 
   
