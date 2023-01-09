@@ -1098,7 +1098,7 @@ header {
 //  }
 
 
-#zsiq_float {
+.zsiq_custommain.siq_bR {
   right: 25px;
   z-index: 50;
   position: fixed;
@@ -1107,6 +1107,7 @@ header {
   height: 132px;
   border-radius: 50%;
   cursor: pointer;
+  touch-action: none;
 
   @media (min-width: 1200px) and (max-width: 1499px) {
     right: 75px;
